@@ -1,6 +1,6 @@
-# Project Title
+# Interface Design
 
-Interface Design Exam Project 2017
+Exam Project 2017
 
 ## Getting Started
 
