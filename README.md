@@ -19,8 +19,9 @@ git remote add upstream https://github.com/joingi/kea-techn.git
 npm install
 ```
 
+Make branch
 ```
-make branch
+git checkout -b name-of-branch
 ```
 
 ## Built With
