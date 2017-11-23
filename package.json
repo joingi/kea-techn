@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/joingi/kea-techn#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.6",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-hb": "^6.0.2",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
   }
 }
