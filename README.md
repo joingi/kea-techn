@@ -24,6 +24,11 @@ Make branch
 git checkout -b name-of-branch
 ```
 
+IMPORTANT!!!
+To push to github, you have to be on your branch and use following command
+```
+git push origin name-of-YOUR-branch
+```
 ## Built With
 
 * Add tools Here
