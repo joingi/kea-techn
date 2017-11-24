@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
-// var hb = require('gulp-hb');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 
 
@@ -9,8 +10,8 @@ gulp.task('browserSync', ['sass'], function () {
 
     browserSync.init({
         server: 'app',
-        index: 'index.html',
-        browser: 'google chrome'
+        index: 'views/html/events.html',
+        browser: 'google chrome',
     });
 
 });
@@ -23,9 +24,24 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('html', function () {
+    return gulp.src('app/views/pages/*.hbs')
+        .pipe(handlebars({}, {
+        ignorePartials: true,
+        batch: ['app/views/partials']
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('app/views/html'));
+});
+
+
 // All tasks
 gulp.task('watch', ['browserSync'], function () {
+    gulp.watch('app/views/**/*.hbs', ['html']);
     gulp.watch('app/sass/*.scss', ['sass']);
-    gulp.watch('app/*.html').on('change', browserSync.reload);
+    gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
+
