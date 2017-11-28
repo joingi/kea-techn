@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 
-<head>
+  <head>
     <title>
         {{#if title}} {{title}} {{else}} Base Page Title {{/if}}
     </title>
@@ -10,19 +10,26 @@
     {{#> head-block}}
         {{!-- Custom <head> content per page could be added. --}}
     {{/head-block}}
-</head>
+  </head>
 
     <body>
         {{#> header-block}}
             {{!-- Header content goes here. --}}
         {{/header-block}}
 
-        <footer>
-            {{#> footer-block}}
-                {{!-- The `includes/footer` partial is the default content, but can be overridden. --}}
-                {{> includes/footer}}
-            {{/footer-block}}
-        </footer>
+
+        {{#> sidebar-block}}
+            {{!-- sidebar content goes here. --}}
+            {{> includes/sidebar}}
+        {{/sidebar-block}}
+
+
+    <footer>
+        {{#> footer-block}}
+            {{!-- The `includes/footer` partial is the default content, but can be overridden. --}}
+            {{> includes/footer}}
+        {{/footer-block}}
+    </footer>
 
         {{#> scripts-block}}
             {{!-- Custom scripts per page can be added. --}}
