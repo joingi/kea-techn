@@ -14,11 +14,14 @@ gulp.task('browserSync', ['sass'], function () {
         browser: 'google chrome',
     });
 
+    // gulp.watch("app/scss//**/*.scss", ['sass']);
+    // gulp.watch("app/views/*.html").on('change', browserSync.reload);
+
 });
 
 // Complile sass into css and reload browser
 gulp.task('sass', function () {
-    return gulp.src('app/sass/*.scss')
+    return gulp.src('app/sass/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('app/css/'))
         .pipe(browserSync.stream());
@@ -40,8 +43,7 @@ gulp.task('html', function () {
 // All tasks
 gulp.task('watch', ['browserSync'], function () {
     gulp.watch('app/views/**/*.hbs', ['html']);
-    gulp.watch('app/sass/*.scss', ['sass']);
+    gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
-

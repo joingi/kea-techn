@@ -15,6 +15,10 @@
     }}
   {{/inline}}
 
+  {{#*inline "sidebar-block"}}
+      {{> includes/sidebar}}
+  {{/inline}}
+
   {{!-- Let's override the "footer-block" content. --}}
   {{#*inline "footer-block"}}
     <p>We are now overriding the default "footer-block" content with this content.</p>
