@@ -373,9 +373,158 @@ template {
 [hidden] {
   display: none; }
 
+.main-section {
+  height: 100vh;
+  margin-left: 200px;
+  padding: 0 20px;
+  transition: margin-left 0.3s ease-in; }
+
+/* Color */
 /* components */
-#sidebar {
-  background: tomato;
+.sidebar {
+  background: #2C3E50;
   color: red;
   height: 100vh;
-  width: 200px; }
+  width: 160px;
+  position: fixed;
+  transition: width 0.3s ease-in; }
+
+.sidebar-is-collapsed {
+  width: 80px;
+  transition: width 0.3s ease-out; }
+
+.sidebar-menu {
+  display: flex; }
+  .sidebar-menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0; }
+    .sidebar-menu ul li:nth-child(1) {
+      background: white;
+      padding: 5px 0px;
+      min-height: 56px; }
+      .sidebar-menu ul li:nth-child(1) a {
+        flex-direction: row-reverse;
+        color: #2C3E50; }
+      .sidebar-menu ul li:nth-child(1) .sidebar-icon-create-event {
+        padding-left: 10px; }
+    .sidebar-menu ul li {
+      width: 100%;
+      margin: 15px 0px; }
+      .sidebar-menu ul li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        padding: 0 10px; }
+
+.logo {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 10px; }
+
+.btn-sidebar-menu-collapsed {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px; }
+  .btn-sidebar-menu-collapsed p {
+    color: white; }
+
+#btn-sidebar-is-collapsed {
+  cursor: pointer; }
+
+#tech {
+  opacity: 1;
+  animation: expandTechText 0.2s alternate; }
+
+@keyframes expandTechText {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* LOGO ANIMATE COLLAPSE SETTINGS */
+.mainLogo-is-collapsed {
+  display: block;
+  left: 10px;
+  background: green; }
+  .mainLogo-is-collapsed #tech {
+    opacity: 0;
+    animation: collapseTechText 0.2s alternate; }
+
+@keyframes collapseTechText {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .mainLogo-is-collapsed #check-box {
+    animation: collapseCheckBox 0.3s alternate;
+    transform-origin: -30px 0px; }
+  .mainLogo-is-collapsed #N {
+    animation: collapseN 0.3s alternate;
+    transform: translate(-60px); }
+
+@keyframes collapseCheckBox {
+  0% {
+    transform-origin: 0px 0px; }
+  100% {
+    transform-origin: -30px 0px; } }
+
+@keyframes collapseN {
+  0% {
+    transform: translate(0px); }
+  100% {
+    transform: translate(-60px); } }
+
+/* LOGO ANIMATE NORMAL SETTINGS */
+#check-box {
+  animation: expandCheckBox 0.3s alternate;
+  transform-origin: 0px 0px; }
+
+#N {
+  animation: expandN 0.3s alternate;
+  transform: translate(0px); }
+
+@keyframes expandCheckBox {
+  0% {
+    transform-origin: -30px 0px; }
+  100% {
+    transform-origin: 0px 0px; } }
+
+@keyframes expandN {
+  0% {
+    transform: translate(-60px); }
+  100% {
+    transform: translate(0px); } }
+
+/* animation of list items names collapsing */
+.sidebar-menu-name {
+  visibility: visible;
+  opacity: 1; }
+  .sidebar-menu-name p {
+    display: block; }
+
+.sidebarMenuLink-is-collapsed {
+  display: flex; }
+  .sidebarMenuLink-is-collapsed .btn-sidebar-menu-collapsed {
+    margin-bottom: 50px !important; }
+  .sidebarMenuLink-is-collapsed p {
+    display: none; }
+  .sidebarMenuLink-is-collapsed a:nth-child(1) {
+    width: 100%; }
+    .sidebarMenuLink-is-collapsed a:nth-child(1) .sidebar-icon-create-event {
+      padding-left: 0 !important; }
+
+.sidebarMenuLink-is-collapsed:nth-child(2) {
+  min-height: 90px; }
