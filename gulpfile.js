@@ -10,7 +10,7 @@ gulp.task('browserSync', ['sass'], function () {
 
     browserSync.init({
         server: 'app',
-        index: 'views/html/events.html',
+        index: 'views/html/partners.html',
         browser: 'google chrome',
     });
 
@@ -28,10 +28,15 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
+    var menuLinks = {
+		events: 'www.mbl.is'
+    }
+
     return gulp.src('app/views/pages/*.hbs')
         .pipe(handlebars({}, {
         ignorePartials: true,
-        batch: ['app/views/partials']
+        batch: ['app/views/partials'],
+        helpers : 'app/views/helpers'
     }))
     .pipe(rename({
       extname: '.html'
