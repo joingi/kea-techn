@@ -20,11 +20,17 @@
           {{> includes/sidebar}}
       {{/sidebar-block}}
 
-      <div class="main-section">
+      <div class="main-container">
 
           {{#> header-block}}
               {{!-- Header content goes here. --}}
           {{/header-block}}
+
+
+          {{#> container-block}}
+              {{!-- container content goes here. --}}
+              {{> layouts/events-list}}
+          {{/container-block}}
 
         <footer>
             {{#> footer-block}}

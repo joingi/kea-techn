@@ -373,7 +373,7 @@ template {
 [hidden] {
   display: none; }
 
-.main-section {
+.main-container {
   height: 100vh;
   margin-left: 200px;
   padding: 0 20px;
@@ -381,6 +381,60 @@ template {
 
 /* Color */
 /* components */
+.events-grid-container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px; }
+
+.partners-grid-container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 40px; }
+
+.events-card {
+  background: #CACACA;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in; }
+  .events-card:hover {
+    top: -2;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+
+.partners-card {
+  background: #fff;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  padding: 2rem;
+  top: 0;
+  transition: all 0.1s ease-in; }
+  .partners-card:hover {
+    top: -2;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+
+.partners-card .partner-thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center; }
+
 .sidebar {
   background: #2C3E50;
   color: red;
@@ -528,3 +582,21 @@ template {
 
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
+
+@media only screen and (min-width: 500px) {
+  .events-grid-container {
+    grid-template-columns: 1fr 1fr; }
+  .partners-grid-container {
+    grid-template-columns: 1fr 1fr; } }
+
+@media only screen and (min-width: 850px) {
+  .events-grid-container {
+    grid-template-columns: repeat(3, 1fr); }
+  .partners-grid-container {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media only screen and (min-width: 1240px) {
+  .events-grid-container {
+    grid-template-columns: repeat(4, 1fr); }
+  .partners-grid-container {
+    grid-template-columns: repeat(4, 1fr); } }
