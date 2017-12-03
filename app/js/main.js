@@ -28,22 +28,32 @@ buttonSidebarIsCollapsed.addEventListener("click", function(){
 
 })
 
+// var test = document.getElementById('test')
+// (function () {
+//   // test.addEventListener("click", function(){
+//     // console.log("X")
+//     // window.onload = function(){
+//
+//     // }
+//     window.addEventListener('load',
+//   function() {
+//     alert('hello!');
+//   }, false);
+//     // window.onload = customerChoice();
+//   // })
+// }());
+// window.addEventListener('load', function() {
+//
+//   var test = document.getElementById('test');
+//
+//   test.addEventListener("click", function(){
+//     console.log("X");
+//   });
+//
+// }, false);
 
-var source   = $("#some-template").html();
-var template = Handlebars.compile(source);
-var data = { users: [
-    {username: "alan", firstName: "Alan", lastName: "Johnson", email: "alan@test.com" },
-    {username: "allison", firstName: "Allison", lastName: "House", email: "allison@test.com" },
-    {username: "ryan", firstName: "Ryan", lastName: "Carson", email: "ryan@test.com" }
-  ]};
-$("#content-placeholder").html(template(data));
 
-// var readyStateCheckInterval = setInterval(function() {
-//     if (document.readyState === "complete") {
-//         clearInterval(readyStateCheckInterval);
-//         init();
-//
-//
-//
-//     }
-// }, 10);
+window.onload = function(){
+  document.getElementById('test2').click();
+  // return true;
+  }

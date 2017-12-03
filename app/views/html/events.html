@@ -35,6 +35,7 @@
           <div class="sidebar-menu">
             <ul >
               <li  class="sidebar-menu-name">
+                <button   type="button">
                 <a href="#">
                 <div class="sidebar-icon-create-event">
                   <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -47,12 +48,14 @@
                     </g>
                   </svg>
                 </div>
-                <p >Create event</p>
+                <span >Create event</span>
                 </a>
+              </button>
               </li>
-              <li  class="sidebar-menu-name">
-                <a href="#">
-                <div>
+              <li class="sidebar-menu-name">
+                <button  id="test" type="button">
+                <a href="/events">
+                <div class="events-logo">
                   <svg width="38px" height="38px" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                       <g transform="translate(-61 -186)" fill-rule="nonzero" fill="#FFF">
@@ -63,11 +66,13 @@
                     </g>
                   </svg>
                 </div>
-                <p>Events</p>
+                <span>Events</span>
                 </a>
+                </button>
               </li>
               <li  class="sidebar-menu-name">
-                <a href="#">
+                <button type="button">
+                <a href="/partners">
                 <div>
                   <svg width="40px" height="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
@@ -81,8 +86,9 @@
                     </g>
                   </svg>
                 </div>
-                <p >Partners</p>
+                <span >Partners</span>
                 </a>
+              </button>
               </li>
             </ul>
             </div>
@@ -101,7 +107,7 @@
                     </g>
                   </g>
                 </svg>
-                  <p>Collapse menu</p>
+                  <span>Collapse menu</span>
               </div>
             </div>
           </div>
@@ -109,29 +115,81 @@
       <div class="main-container">
 
     <div class="header-wraper">
-      <img src="img/hero-1.png" alt="Header 13 alt title"/>
-    
       <div class="menu-wraper">
-        <div class="menu-logo">
-          <span class="icon logo">Logo</span>
+    <div class="menu-view-container">
+        <div class="menu-view">
+    
+          <a href="#">
+            <svg width="30px" height="32px" viewBox="0 0 30 32" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(-200 -28)" fill="#2C3E50">
+                  <g transform="translate(200 28)">
+                    <path d="M0 0h6v6H0zm0 9h18v10H0zm0 13h18v10H0zM12 0h6v6h-6zm9 9h9v10h-9zm0 13h9v10h-9zm3-22h6v6h-6z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+    
+          <a>
+            <svg width="30px" height="32px" viewBox="0 0 30 32" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(-250 -28)" fill="#E74C3C">
+                  <g transform="translate(250 28)">
+                    <path d="M0 0h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6zM0 13h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6zM0 26h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+    
         </div>
     
-        <nav  id="menu" class="nav">
-          <div id="animalList"></div>
-      	<ul>
-      		<li>
     
-      			<a  href="/events">
-      				<span  class="icon"> <i aria-hidden="true"  class="icon-events"></i></span><span>Events</span>
-      			</a>
-      		</li>
-      		<li>
-      			<a href="/partners">
-              <span class="icon"> <i aria-hidden="true" class="icon-partners"></i></span><span>Partners</span>
-            </a>
-      		</li>
-      	</ul>
-      </nav>
+          <a class="menu-wraper-button-container">
+            <div class="btn-upcoming-events">
+              <p>Upcoming events</p>
+            </div>
+          </a>
+    
+          <a class="menu-wraper-button-container">
+            <div class="btn-past-events">
+              <p>Past events</p>
+            </div>
+          </a>
+    
+          <a class="menu-wraper-button-container">
+              <div class="btn-search">
+                <p>Search for events...</p>
+    
+    
+                <svg width="19px" height="19px" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1151 -36)" fill-rule="nonzero" fill="#7C7C7C">
+                      <g transform="translate(1151 36)">
+                        <path d="M18.835662 18.0310421l-4.6183189-4.6172949c1.2388556-1.4239468 1.9889111-3.2818182 1.9889111-5.31241682C16.2062542 3.63148558 12.5697494 0 8.10312708 0 3.63229098 0 0 3.63569845 0 8.10133038c0 4.46563192 3.63650477 8.10133042 8.10312708 8.10133042 2.03104902 0 3.88933242-.7498892 5.31359502-1.9884701l4.6183189 4.6172949C18.1445997 18.94102 18.2920825 19 18.4353515 19c.143269 0 .2907518-.0547672.4003105-.1685144.2191173-.2190687.2191173-.5813747 0-.8004435zM1.13351076 8.10133038c0-3.8421286 3.1266356-6.9638581 6.96540252-6.9638581 3.84298072 0 6.96540252 3.12594235 6.96540252 6.9638581 0 3.83791572-3.1224218 6.96807092-6.96540252 6.96807092-3.8387669 0-6.96540252-3.1259423-6.96540252-6.96807092z"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+          </a>
+    </div>
+    
+          <div class="user">
+            <img href="../../.././images/mask.jpg" />
+            <span>John Doe</span>
+            <svg width="17px" height="9px" viewBox="0 0 17 9" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(-1383 -43)" fill-rule="nonzero" fill="#4E5058">
+                  <g transform="translate(1383 43)">
+                    <path d="M16.8260598.17391304c-.2343054-.23188405-.6150518-.23188405-.8493572 0l-7.4684861 7.4057971L1.02508632.17391304c-.23430544-.23188405-.6150518-.23188405-.84935724 0-.23430544.23188406-.23430544.60869566 0 .8405797l7.8931647 7.81159422C8.18604652 8.942029 8.33248742 9 8.49357242 9c.1464409 0 .3075259-.057971.42467863-.17391304l7.89316467-7.8115942c.2489496-.23188406.2489496-.60869566.0146441-.84057972z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+    
     
       </div>
     
