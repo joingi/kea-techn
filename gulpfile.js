@@ -9,13 +9,17 @@ var browserSync = require('browser-sync').create();
 gulp.task('browserSync', ['sass'], function () {
 
     browserSync.init({
-        server: 'app',
-        index: 'views/html/partners.html',
-        browser: 'google chrome',
+        server:{
+          baseDir: 'app',
+          logFileChanges:false,
+          index: './views/html/events.html',
+          browser: 'google chrome',
+          routes: {
+            '/events': 'app/views/html/events.html',
+            '/partners': 'app/views/html/partners.html'
+          }
+      }
     });
-
-    // gulp.watch("app/scss//**/*.scss", ['sass']);
-    // gulp.watch("app/views/*.html").on('change', browserSync.reload);
 
 });
 
@@ -52,3 +56,5 @@ gulp.task('watch', ['browserSync'], function () {
     gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
+
+gulp.task('default', ['watch']);

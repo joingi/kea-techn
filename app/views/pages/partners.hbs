@@ -12,6 +12,14 @@
   {{/inline}}
 
 
+  {{#> header-block}}
+      {{!-- Header content goes here. --}}
+
+  {{/header-block}}
+
+
+
+
   {{#*inline "container-block"}}
       {{> layouts/partners-list}}
   {{/inline}}
@@ -25,6 +33,7 @@
   {{!-- Let's add a script for this layout. --}}
   {{#*inline "scripts-block"}}
     <script src="../.././js/main.js"></script>
+    <script src=".././helpers/links.js"></script>
   {{/inline}}
 
 {{/layouts/base}}

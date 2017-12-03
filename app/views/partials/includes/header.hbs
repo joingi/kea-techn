@@ -1,4 +1,30 @@
 {{!-- includes/hero.hbs --}}
 <div class="header-wraper">
   <img src="{{header-src}}" alt="{{header-alt}}"/>
+
+  <div class="menu-wraper">
+    <div class="menu-logo">
+      <span class="icon logo">Logo</span>
+    </div>
+    {{!-- <h4>{{{link my_link}}}</h4> --}}
+
+    <nav  id="menu" class="nav">
+      <div id="animalList"></div>
+  	<ul>
+  		<li>
+
+  			<a  href="/events">
+  				<span  class="icon"> <i aria-hidden="true"  class="icon-events"></i></span><span>Events</span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="/partners">
+          <span class="icon"> <i aria-hidden="true" class="icon-partners"></i></span><span>Partners</span>
+        </a>
+  		</li>
+  	</ul>
+  </nav>
+
+  </div>
+
 </div>
