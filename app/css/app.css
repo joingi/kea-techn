@@ -807,19 +807,13 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  justify-content: center; }
-=======
   justify-content: space-evenly; }
->>>>>>> ba172139103e867b358fdd1edf1943974a7f5779
 
 .partners-card span {
   line-height: 30px; }
 
 .partner-thumb {
   background-repeat: no-repeat; }
-<<<<<<< HEAD
-=======
 
 @media only screen and (min-width: 500px) {
   .partners-grid-container {
@@ -832,4 +826,3 @@ body {
 @media only screen and (min-width: 1240px) {
   .partners-grid-container {
     grid-template-columns: repeat(4, 1fr); } }
->>>>>>> ba172139103e867b358fdd1edf1943974a7f5779
