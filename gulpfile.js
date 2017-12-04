@@ -32,9 +32,6 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
-    var menuLinks = {
-		events: 'www.mbl.is'
-    }
 
     return gulp.src('app/views/pages/*.hbs')
         .pipe(handlebars({}, {
