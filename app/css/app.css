@@ -524,7 +524,7 @@ body {
 
 .partners-card .partner-thumb {
   padding-bottom: 60%;
-  background-size: cover;
+  background-size: contain;
   background-position: center center; }
 
 .sidebar {
@@ -683,6 +683,18 @@ body {
 
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
+
+.partners-card article {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.partners-card span {
+  line-height: 30px; }
+
+.partner-thumb {
+  background-repeat: no-repeat; }
 
 @media only screen and (min-width: 500px) {
   .events-grid-container {
