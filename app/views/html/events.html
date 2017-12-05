@@ -114,23 +114,24 @@
           
           </div>
           <div  id="sidebarMobile" class="sidebarMobile">
+            <div class="sidebarMobileContainer"></div>
             <div class="sidebarMobile-container">
             <div class="icons-container">
           
-                <div class="burger">
-                  <svg width="36px" height="30px" viewBox="0 0 36 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <desc>Created with Sketch.</desc>
-                      <defs></defs>
-                      <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Events" transform="translate(-20.000000, -15.000000)" fill-rule="nonzero" fill="#FFFFFF">
-                              <g id="menu-(2)" transform="translate(20.000000, 15.000000)">
-                                  <path d="M36,1.5 C36,0.6 35.4,0 34.5,0 L1.5,0 C0.6,0 0,0.6 0,1.5 L0,4.5 C0,5.4 0.6,6 1.5,6 L34.5,6 C35.4,6 36,5.4 36,4.5 L36,1.5 Z" id="Shape"></path>
-                                  <path d="M36,13.5 C36,12.6 35.4,12 34.5,12 L1.5,12 C0.6,12 0,12.6 0,13.5 L0,16.5 C0,17.4 0.6,18 1.5,18 L34.5,18 C35.4,18 36,17.4 36,16.5 L36,13.5 Z" id="Shape"></path>
-                                  <path d="M36,25.5 C36,24.6 35.4,24 34.5,24 L1.5,24 C0.6,24 0,24.6 0,25.5 L0,28.5 C0,29.4 0.6,30 1.5,30 L34.5,30 C35.4,30 36,29.4 36,28.5 L36,25.5 Z" id="Shape"></path>
-                              </g>
-                          </g>
-                      </g>
-                  </svg>
+                <div class="burger" id="btnSidebarMobile">
+                    <svg width="36px" height="30px" viewBox="0 0 36 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Events" transform="translate(-20.000000, -15.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                                <g id="menu-(2)" transform="translate(20.000000, 15.000000)">
+                                    <path d="M36,1.5 C36,0.6 35.4,0 34.5,0 L1.5,0 C0.6,0 0,0.6 0,1.5 L0,4.5 C0,5.4 0.6,6 1.5,6 L34.5,6 C35.4,6 36,5.4 36,4.5 L36,1.5 Z" id="Shape"></path>
+                                    <path d="M36,13.5 C36,12.6 35.4,12 34.5,12 L1.5,12 C0.6,12 0,12.6 0,13.5 L0,16.5 C0,17.4 0.6,18 1.5,18 L34.5,18 C35.4,18 36,17.4 36,16.5 L36,13.5 Z" id="Shape"></path>
+                                    <path d="M36,25.5 C36,24.6 35.4,24 34.5,24 L1.5,24 C0.6,24 0,24.6 0,25.5 L0,28.5 C0,29.4 0.6,30 1.5,30 L34.5,30 C35.4,30 36,29.4 36,28.5 L36,25.5 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
           
           
@@ -175,6 +176,7 @@
     <div class="header-wraper">
       <div class="menu-wraper">
     <div class="menu-view-container">
+      <div class="menu-view-filters">
         <div class="menu-view">
     
           <a href="#">
@@ -215,8 +217,8 @@
               <p>Past events</p>
             </div>
           </a>
-    
-          <a class="menu-wraper-button-container">
+        </div>
+          <a class="menu-wraper-button-container searchfilter">
               <div class="btn-search">
                 <p>Search for events...</p>
     
@@ -232,7 +234,7 @@
                 </svg>
               </div>
           </a>
-    </div>
+      </div>
     
           <div class="user">
             <img href="../../.././images/mask.jpg" />
@@ -252,6 +254,9 @@
       </div>
     
     </div>
+
+
+
 
 
       <div id="events-container">
@@ -453,13 +458,10 @@
 
 
 
-
     <script src="../.././js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/handlebars.js"></script>
         <script src=".././helpers/links.js"></script>
-
-      </div>
 
     </body>
 
