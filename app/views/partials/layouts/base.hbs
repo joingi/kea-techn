@@ -16,36 +16,39 @@
     <body>
 
       {{#> sidebar-block}}
-          {{!-- sidebar content goes here. --}}
           {{> includes/sidebar}}
+          {{> includes/sidebarMobile}}
       {{/sidebar-block}}
 
-      <div class="main-container">
+      {{!-- {{#> sidebarMobile-block}}
+
+          {{> includes/sidebarMobile}}
+      {{/sidebarMobile-block}} --}}
+
+
+
+        <div class="main-container">
 
           {{#> header-block}}
-              {{!-- Header content goes here. --}}
-
           {{/header-block}}
 
 
           {{#> container-block}}
-              {{!-- container content goes here. --}}
               {{> layouts/events-list}}
           {{/container-block}}
 
-          {{!-- {{#> time-container-block}}
-
-              {{> layouts/eventsTime}}
-          {{/time-container-block}} --}}
+        </div>
 
 
-      </div>
+
 
         {{#> scripts-block}}
             {{!-- Custom scripts per page can be added. --}}
         {{/scripts-block}}
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="../.././js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/handlebars.js"></script>
+        <script src=".././helpers/links.js"></script>
+
     </body>
 
 </html>
