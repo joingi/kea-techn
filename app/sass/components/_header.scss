@@ -168,3 +168,11 @@
     margin-left: 0;
   }
 }
+@media screen and (max-width: 670px){
+  .menu-wraper{
+    .user{
+      display: none;
+    }
+
+  }
+}
