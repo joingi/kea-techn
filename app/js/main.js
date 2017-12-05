@@ -5,7 +5,7 @@ var sidebar = document.querySelector(".sidebar")
 
 var mainLogo = document.querySelector(".mainLogo");
 var sidebarMenuLink = document.querySelectorAll('.sidebar-menu-name')
-
+var iconClosed = document.getElementById('close')
 
 
 buttonSidebarIsCollapsed.addEventListener("click", function(){
@@ -14,12 +14,14 @@ buttonSidebarIsCollapsed.addEventListener("click", function(){
 
       sidebar.classList.remove('sidebar-is-collapsed')
       mainLogo.classList.remove('mainLogo-is-collapsed')
+      iconClosed.classList.remove('buttonSidebar-is-collapsed')
       for(var i = 0; i < sidebarMenuLink.length; i++){
         sidebarMenuLink[i].classList.remove('sidebarMenuLink-is-collapsed')
       }
   }else{
     sidebar.classList.add('sidebar-is-collapsed');
     mainLogo.classList.add('mainLogo-is-collapsed');
+    iconClosed.classList.add('buttonSidebar-is-collapsed')
     for(var i = 0; i < sidebarMenuLink.length; i++){
       sidebarMenuLink[i].classList.add('sidebarMenuLink-is-collapsed')
     }
