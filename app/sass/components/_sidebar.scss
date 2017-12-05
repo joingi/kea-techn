@@ -204,9 +204,13 @@
   min-height:90px;
 }
 
-// 
+//
 // .events-logo{
 //   svg g g {
 //     fill:$primaryRed;
 //   }
 // }
+
+.buttonSidebar-is-collapsed{
+   transform:translate(20px,10px);
+}
