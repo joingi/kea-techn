@@ -935,6 +935,11 @@ body {
   max-height: 100px;
   height: 100%; }
 
+.chart-sales {
+  width: 80%;
+  height: 228px;
+  margin: 15px auto; }
+
 @media only screen and (min-width: 500px) {
   .partners-grid-container {
     grid-template-columns: 1fr; } }
