@@ -32,16 +32,18 @@ buttonSidebarIsCollapsed.addEventListener("click", function(){
 
 /* MOBILE  */
 
-btnSidebarMobile.document.getElementById("btnSidebarMobile");
+btnSidebarMobile = document.getElementById("btnSidebarMobile");
 sidebarMobile = document.querySelector(".sidebarMobileContainer")
 
 btnSidebarMobile.addEventListener("click", function(){
+
   console.log("X");
   if(sidebarMobile.classList.contains('sidebarMobile-is-collapsed')){
       sidebarMobile.classList.remove('sidebarMobile-is-collapsed')
-
+      btnSidebarMobile.classList.remove('burger-is-active')
   }else{
       sidebarMobile.classList.add('sidebarMobile-is-collapsed')
+      btnSidebarMobile.classList.add('burger-is-active')
   }
 
 })

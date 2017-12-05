@@ -831,6 +831,12 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
+.events-logo svg g g {
+  fill: #E74C3C; }
+
+.events-logo span {
+  color: #E74C3C; }
+
 .buttonSidebar-is-collapsed {
   transform: translate(20px, 10px); }
 
@@ -861,19 +867,58 @@ body {
     justify-content: space-between;
     width: 100%;
     align-items: center; }
+    .icons-container .burger {
+      position: relative;
+      transition: left 0.1s;
+      left: 0;
+      height: 100%; }
+      .icons-container .burger svg {
+        height: 100%; }
   .userMobile img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     background: green; } }
 
+/* mobile animation */
 .sidebarMobileContainer {
   height: 100vh;
-  width: 100px;
+  width: 60px;
   position: fixed;
   top: 0;
-  background: pink;
-  z-index: 2; }
+  background: #2C3E50;
+  z-index: 2;
+  left: -200px;
+  transition: left 0.3s; }
+
+.sidebarMobile-is-collapsed {
+  transition: left 0.1s;
+  left: 0px; }
+
+.burger-is-active {
+  left: 45px !important;
+  transition: left 0.3s; }
+  .burger-is-active #Shape1 {
+    transform: rotate(47deg) translate(1px, -6px); }
+  .burger-is-active #Shape2 {
+    display: none; }
+  .burger-is-active #Shape3 {
+    transform: rotate(-45deg) translate(-16px, -8px); }
+
+.sidebar-is-active-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 73px; }
+  .sidebar-is-active-icons div {
+    margin-bottom: 30px;
+    cursor: pointer; }
+  .sidebar-is-active-icons div:nth-child(1) {
+    width: 100%;
+    background-color: white; }
+    .sidebar-is-active-icons div:nth-child(1) a svg {
+      height: 20px;
+      padding: 10px; }
 
 .partners-card article {
   display: flex;
