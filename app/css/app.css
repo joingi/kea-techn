@@ -390,7 +390,6 @@ body {
   align-items: end;
   min-height: 109px;
   height: auto;
-  padding-left: 20px;
   padding-top: 20px; }
 
 .menu-wraper-button-container {
@@ -402,7 +401,6 @@ body {
   margin-left: auto; }
 
 .header-wraper {
-  padding: 0 20px;
   position: relative; }
 
 .btn-upcoming-events p {
@@ -410,7 +408,8 @@ body {
   padding: 15px 20px;
   background: #E74C3C;
   font-size: 14px;
-  color: white; }
+  color: white;
+  white-space: nowrap; }
 
 .btn-past-events p {
   border-radius: 100px;
@@ -418,10 +417,13 @@ body {
   background: white;
   font-size: 14px;
   color: #4E5058;
-  border: 1px solid #E9E9E9; }
+  border: 1px solid #E9E9E9;
+  white-space: nowrap; }
 
 .btn-search-container {
   width: 100%; }
+  .btn-search-container p {
+    white-space: nowrap; }
 
 .btn-search {
   display: flex;
@@ -429,24 +431,25 @@ body {
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 100px;
-  padding: 0px 20px;
+  padding: 15px 20px;
   justify-content: space-between; }
   .btn-search p {
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 0; }
 
 .menu-view-container {
   display: flex;
   width: 100%;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
   margin-bottom: 10px; }
 
-.menu-view a:nth-child(1) {
-  margin-right: 20px; }
-
-.menu-view a:nth-child(2) {
-  margin-right: 40px; }
+.menu-view {
+  display: flex; }
+  .menu-view a:nth-child(1) {
+    margin-right: 20px; }
+  .menu-view a:nth-child(2) {
+    margin-right: 20px; }
 
 .user {
   display: flex;
@@ -464,14 +467,26 @@ body {
     width: 100%;
     text-align: center; }
 
-@media screen and (max-width: 1148px) {
+@media screen and (max-width: 1064px) {
+  .user span {
+    display: none; }
+  .menu-view a {
+    margin-right: 10px !important; }
+    .menu-view a svg {
+      height: 25px; }
+  .btn-upcoming-events p {
+    padding: 10px 15px; }
+  .btn-past-events p {
+    padding: 10px 15px; }
+  .btn-search {
+    padding: 10px 15px; } }
+
+@media screen and (max-width: 842px) {
+  .menu-view-container {
+    flex-wrap: wrap; }
   .menu-wraper-button-container:nth-child(4) {
     margin-right: auto;
-    margin-left: 0; }
-  .menu-view a svg {
-    width: 25px; }
-  .menu-view a:nth-child(2) {
-    margin-right: 20px; } }
+    margin-left: 0; } }
 
 .events-card {
   display: flex;
