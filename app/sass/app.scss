@@ -1,4 +1,5 @@
 /* Base */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 @import "base/normalize";
 @import "base/global";
 @import "base/vars";
@@ -14,4 +15,5 @@
 @import "components/sidebar";
 @import "components/sidebarMobile";
 @import "components/partners";
+@import "components/statistics";
 @import "components/mediaqueries";
