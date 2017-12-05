@@ -95,12 +95,24 @@
     	}
 }
 
-
 .event-card-carosel{
     max-height: 200px;
     height: 100%;
     width: 250px;
     padding: 10px;
-    margin-right: 10px;
     margin-bottom: 20px;
   }
+
+.stats-event-hedline {
+    text-align: center;
+    color: $primaryBlack;
+}
+
+.stats-publish-event {
+    // display: flex;
+    text-align: center;
+    border: 1px solid $borderGray;
+    width: 60vw; 
+    max-height: 100px;
+    height: 100%;
+}

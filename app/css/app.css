@@ -894,5 +894,15 @@ body {
   height: 100%;
   width: 250px;
   padding: 10px;
-  margin-right: 10px;
   margin-bottom: 20px; }
+
+.stats-event-hedline {
+  text-align: center;
+  color: #4E5058; }
+
+.stats-publish-event {
+  text-align: center;
+  border: 1px solid #E9E9E9;
+  width: 60vw;
+  max-height: 100px;
+  height: 100%; }
