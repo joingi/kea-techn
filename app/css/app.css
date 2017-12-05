@@ -839,6 +839,101 @@ body {
 .partner-thumb {
   background-repeat: no-repeat; }
 
+.iCarouselArticles {
+  padding: 40px 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.carousel__nav {
+  z-index: 10;
+  position: relative; }
+  .carousel__nav button {
+    background-color: transparent;
+    border: 0; }
+
+.carousel__button--prev, .carousel__button--next {
+  top: 0;
+  bottom: 0; }
+
+.carousel__button--prev {
+  left: 0;
+  top: 70px;
+  position: absolute; }
+
+.carousel__button--next {
+  right: 0;
+  top: 70px;
+  position: absolute; }
+
+.carousel__container {
+  overflow: hidden;
+  height: 220px;
+  max-width: 100%; }
+
+.carousel__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
+
+.carousel__list.unwrap {
+  flex-wrap: nowrap; }
+
+.carousel__item {
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #fff;
+  padding: 0 10px; }
+
+.carousel-image {
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  height: 200px;
+  width: 333px;
+  box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5); }
+
+.carosel-textbox {
+  background-color: #1ABC9C;
+  height: 136px;
+  align-items: center;
+  display: flex; }
+  .carosel-textbox p {
+    line-height: 1.4;
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #1ABC9C;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+    text-align: center;
+    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 105px; }
+  .carosel-textbox :hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.event-card-carosel {
+  max-height: 200px;
+  height: 100%;
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+.stats-event-hedline {
+  text-align: center;
+  color: #4E5058; }
+
+.stats-publish-event {
+  text-align: center;
+  border: 1px solid #E9E9E9;
+  width: 60vw;
+  max-height: 100px;
+  height: 100%; }
+
 @media only screen and (min-width: 500px) {
   .partners-grid-container {
     grid-template-columns: 1fr; } }
