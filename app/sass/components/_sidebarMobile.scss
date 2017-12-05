@@ -1,0 +1,48 @@
+@media screen and (min-width: 670px){
+  .sidebarMobile{
+    display: none;
+
+  }
+}
+@media screen and (max-width: 670px){
+  .break{
+    margin-top: 80px;
+  }
+  .sidebarMobile-container{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: $primaryBlue;
+    width: calc(100% - 40px);
+    z-index: 1;
+    padding: 10px 20px;
+  }
+
+  .icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .userMobile{
+    img{
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      background: green;
+    }
+  }
+
+}
+
+
+.sidebarMobileContainer{
+  height: 100vh;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  background: pink;
+  z-index: 2;
+}

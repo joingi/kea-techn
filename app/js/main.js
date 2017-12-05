@@ -30,6 +30,26 @@ buttonSidebarIsCollapsed.addEventListener("click", function(){
 
 })
 
+/* MOBILE  */
+
+btnSidebarMobile.document.getElementById("btnSidebarMobile");
+sidebarMobile = document.querySelector(".sidebarMobileContainer")
+
+btnSidebarMobile.addEventListener("click", function(){
+  console.log("X");
+  if(sidebarMobile.classList.contains('sidebarMobile-is-collapsed')){
+      sidebarMobile.classList.remove('sidebarMobile-is-collapsed')
+
+  }else{
+      sidebarMobile.classList.add('sidebarMobile-is-collapsed')
+  }
+
+})
+
+
+
+
+
 // var test = document.getElementById('test')
 // (function () {
 //   // test.addEventListener("click", function(){
