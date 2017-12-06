@@ -103,16 +103,358 @@
     margin-bottom: 20px;
   }
 
+.carosel-active {
+    background: $primaryRed;
+    color: #fff;
+}
+
+#carosel-active-span {
+    color: white;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .stats-event-hedline {
     text-align: center;
     color: $primaryBlack;
 }
 
 .stats-publish-event {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border: 1px solid $borderGray;
-    width: 60vw; 
+    width: 70vw; 
     max-height: 100px;
     height: 100%;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.stats-publish-button {
+    height: 50px;
+    width: 105px;
+    border-radius: 25px;
+    border: 1px solid #E9E9E9;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.stats-tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    border: 1px solid $borderGray;
+    padding: 40px;
+    margin: 20px 0; 
+}
+
+.stats-ticket-hedline,
+.stats-price,
+.stats-event-hedline {
+    font-size: 1.5em;
+}
+
+.stats-price-info {
+    font-size: 3em;
+}
+
+hr {
+    display: block;
+    width: 90%;
+    border: 0;
+    border-top: 1px solid $borderGray;
+    margin-bottom: 3em;
+    padding: 0;
+}
+
+.stats-price-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-event-info-container {
+    width: 45vw;
+    border: 1px solid $borderGray;
+    padding: 40px;
+    margin: 20px 0; 
+}
+
+.stats-event-hedline {
+    margin-bottom: 20px;    
+}
+
+.stats-event-layout,
+.stats-scedule-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-event-hedlines {
+    position: relative;
+    margin: 10px 40px 0 40px;
+}
+
+.stats-event-hedline-small {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.stats-event-description {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.stats-event-date {
+    margin-top: 20px;
+}
+
+.stats-event-dec,
+.stats-event-description-info {
+    margin-top: 25px;
+}
+
+.stats-event-location,
+.stats-event-cat-info {
+    margin-top: 60px;
+}
+
+.stats-event-cat {
+    position: absolute;
+    bottom: 0;
+}
+
+.stats-event-date-info {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.stats-event-date-from {
+    margin-right: 20px; 
+}
+
+.stats-event-location-info {
+    margin-top: 23px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-event-text {
+    margin-top: 10px;
+}
+
+.stats-scedule-container {
+    width: 25vw;
+    border: 1px solid #E9E9E9;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.stats-schedule-timestamp {
+    font-weight: 300;
+    margin-top: 38px;
+    &:first-child {
+        margin-top:0;
+    }
+}
+
+.stats-schedule-img {
+    margin-top: -35px;
+}
+
+.stats-schedule-dec-location {
+    font-weight: 300;
+    margin: -17px 0 17px 0;
+    img {
+        margin-right: 10px;
+    }
+}
+
+.tickets-sold-container {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    border: 1px solid #E9E9E9;
+    padding: 40px;
+    margin: 20px 0;
+    height: 100%;
+}
+
+.tickets-sold-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tickets-sold-hedline {
+    text-align: center;
+    margin-bottom: 20px;  
+    font-size: 1.5em;  
+}
+
+.tickets-sold-buttons {
+    height: 30px;
+    width: 105px;
+    border-radius: 25px;
+    border: 1px solid #E9E9E9;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.tickets-sold-right-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.tickets-sold-stats,
+.tickets-sold-income {
+    display: flex;
+}
+
+.tickets-sold-stats {
+    margin-right: 20px;
+}
+
+.tickets-sold-stats-info {
+    margin-left: 10px;
+}
+
+.active-button {
+    color: #fff;
+    background-color: $primaryRed;
+}
+
+.tickets-sold-left-header {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.stats-layout-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ticketsSold {
+    margin-bottom: 40px;
+}
+
+.share-event-container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    border: 1px solid #E9E9E9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#sharesChart {
+    max-height: 400px;  
+}
+
+.share-icon {
+    height: 32px;
+}
+
+@media only screen and (max-width: 1270px){
+    .stats-layout-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tickets-sold-container,
+    .stats-event-info-container {
+        width: 70vw;
+        padding: 20px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-scedule-container {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .stats-tickets,
+    .stats-scedule-container {
+        width: 70vw;
+        padding: 20px;
+    }
+
+    .stats-scedule-layout {
+        justify-content: space-around;
+    }
+
+    .stats-event-layout img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 808px) {
+    .tickets-sold-header {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+   
+    .tickets-sold-left-header {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tickets-sold-buttons {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .stats-event-dec {
+        margin-top: 43px;
+    }
+
+    // .stats-event-cat {
+    //     margin-top: 233px;
+    // }
+}
+
+@media only screen and (max-width: 482px) {
+    .stats-schedule-img,
+    .stats-schedule-time {
+        display: none;
+    }
+
+    .stats-event-date {
+        margin-top: 40px;
+    }
+
+    .stats-event-dec {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .stats-event-dec {
+        margin-top: 78px;
+    }
 }

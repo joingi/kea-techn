@@ -364,10 +364,10 @@
       					</div>
       					<div class="carousel__item js-carousel-item">
       						<div class="event-1 event-card-carosel" >
-                                  <a href="" class="events-card card">
-                                      <span>14 NOV 17:30</span>
+                                  <a href="" class="events-card card carosel-active">
+                                      <span id="carosel-active-span">14 NOV 17:30</span>
                                       <h2>Afterwork Women in Mobile. </h2>
-                                      <span>Mobile Apps / Programming / Java</span>
+                                      <span id="carosel-active-span">Mobile Apps / Programming / Java</span>
                                   </a>
                               </div>
       					</div>
@@ -520,16 +520,167 @@
       				</div>
       			</div>
       		</div>
-      
-              <div class="stats-event-hedline">
-                  <h2>Afterwork Women in Mobile</h2>
+              <div class="stats-container">
+                  <div class="stats-event-hedline">
+                      <h2>Afterwork Women in Mobile</h2>
+                  </div>
+                  <div class="stats-publish-event">
+                      <div class="stats-publish-text">
+                          <span>This Event has not been published. If you press publish, the event will be shown on the main page</span>
+                      </div><br>
+                      <button class="stats-publish-button">Publish</button>
+                  </div>
               </div>
       
-              <div class="stats-publish-event">
-                  <div class="stats-publish-text">
-                      <span>This Event has not been published. If you press publish, the event will be shown on the main page</span>
-                  </div></div><br>
-                  <button class="stats-publish-button">Publish</button>
+              <div class="stats-layout-container">
+                  <div class="tickets-sold-container">
+                      <div class="tickets-sold-hedline">Tickets Sold</div>
+                      <div class="tickets-sold-header">
+                          <div class="tickets-sold-left-header">           
+                              <button class="tickets-sold-buttons active-button">Past 24h</button>
+                              <button class="tickets-sold-buttons">Past 7 days</button>
+                              <button class="tickets-sold-buttons">Past 30 days</button>
+                          </div>
+                          <div class="tickets-sold-right-header">
+                              <div class="tickets-sold-stats">
+                                  <img src="../../images/icons/ticket.svg" alt="Tickets sold">
+                                  <div class="tickets-sold-stats-info">
+                                      <div class="tickets-sold-stats-numb">21</div>
+                                      <div class="tickets-sold-stats-text">Tickets sold</div>
+                                  </div>
+                              </div>
+                              <div class="tickets-sold-income">
+                                  <img src="../../images/icons/dollar-sign.svg" alt="Total income">
+                                  <div class="tickets-sold-stats-info">
+                                      <div class="tickets-sold-stats-numb">735</div>
+                                      <div class="tickets-sold-stats-text">Income</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tickets-sold-chart">
+                          <canvas id="ticketsSold" width="400" height="250"></canvas>
+                      </div>
+                  </div>
+      
+      
+                  <div class="stats-tickets">
+                      <div class="stats-ticket-hedline">Tickets</div>
+                      <div class="stats-pie-chart-container">
+                          <div class="stats-pie-chart">
+                              <canvas id="myChart"></canvas>
+                          </div>
+                      </div>
+                      <hr/>
+                      <div class="stats-price-info-container">
+                          <div class="stats-price">Ticket Price</div>
+                          <div class="stats-price-info"><img src="../../images/icons/dollar-sign.svg" alt="">35</div>
+                          <div class="stats-price">Total Income</div>
+                          <div class="stats-price-info"><img src="../../images/icons/dollar-sign.svg" alt="">1855</div>
+                      </div>
+                  </div>
+                  </div>
+      
+                  <div class="stats-row">
+                  <div class="share-event-container">
+                      <div class="tickets-sold-hedline">Social Media</div>
+                      <div class="tickets-sold-header">
+                          <div class="tickets-sold-left-header">           
+                              <button class="tickets-sold-buttons">Followers</button>
+                              <button class="tickets-sold-buttons active-button">Shares</button>
+                              <button class="tickets-sold-buttons">CTR</button>
+                          </div>
+                          <div class="tickets-sold-right-header">
+                              <div class="tickets-sold-stats">
+                                  <img class="share-icon" src="../../images/icons/share.svg" alt="Shares">
+                                  <div class="tickets-sold-stats-info">
+                                      <div class="tickets-sold-stats-numb">3456 Shares</div>
+                                      <div class="tickets-sold-stats-text">In the past 30 days</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tickets-sold-chart">
+                          <canvas id="sharesChart" width="400" height="250"></canvas>
+                      </div>
+                  </div>
+                  </div>
+      
+                  <div class="stats-row">
+                  <div class="stats-event-info-container">
+                      <div class="stats-event-hedline">Event Information</div>
+                      <div class="stats-event-layout">
+                          <img src="../../images/icons/event-lines.svg" alt="">
+                          <div class="stats-event-hedlines">
+                              <div class="stats-event-hedline-small stats-event-title">Title</div>
+                              <div class="stats-event-hedline-small stats-event-date">Date</div>
+                              <div class="stats-event-hedline-small stats-event-location">Location</div>
+                              <div class="stats-event-hedline-small stats-event-dec">Description</div>
+                              <div class="stats-event-hedline-small stats-event-cat">Catagories</div>
+                          </div>
+                          <div class="stats-event-text">
+                              <div class="stats-event-description">Afterwork Women in Mobile</div>
+                              <div class="stats-event-description stats-event-date-info">
+                                  <div class="stats-event-hedline-small stats-event-date-from">From:<div class="stats-event-description">28 NOV</div></div>
+                                  <div class="stats-event-hedline-small">To:<div class="stats-event-description">2 DEC</div></div>
+                              </div>
+                              <div class="stats-event-description stats-event-location-info">Hotel Nora / Norrebrogade 187, Copenhagen, Denmark</div>
+                              <div class="stats-event-description stats-event-description-info">This year at Code Conference, co-hosts Kara Swisher and Walt Mossberg focused on the current convergence of tech, media and politics. For starters, we’re coming out of a presidential election where two of the biggest issues centered around email-server management and hacking, and where Twitter and Facebook played central roles in messaging and news platforms. Tech is no longer siloed — it has infiltrated every aspect of our lives, including our democracy.</div>
+                              <a><div class="stats-event-hedline-small">Read more ..</div></a>
+                              <div class="stats-event-description stats-event-cat-info">Media / Social Media / Design / Politics </div>
+                          </div>
+                      </div>
+                  </div>
+              
+      
+              <div class="stats-scedule-container">
+                  <div class="stats-event-hedline">Schedule</div>
+                  <div class="stats-scedule-layout">
+                      <div class="stats-schedule-time">
+                          <div class="stats-schedule-timestamp">19:30</div>
+                          <div class="stats-schedule-timestamp">19:45</div>
+                          <div class="stats-schedule-timestamp">20:15</div>
+                          <div class="stats-schedule-timestamp">20:45</div>
+                          <div class="stats-schedule-timestamp">21:00</div>
+                          <div class="stats-schedule-timestamp">21:30</div>
+                          <div class="stats-schedule-timestamp">22:00</div>
+                      </div>
+                      <img class="stats-schedule-img" src="../../images/icons/schedule-line.svg" alt="">
+                      <div class="stats-schedule-info-container">
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">Registration of Participants / Drinks</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Front desk</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">Insurtech industry – investors perspective</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Conference Hall 2</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">BlockChain: the Key to Financial Inclusion</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Conference Hall 2</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">Food and Drinks</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Main Hall</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">The Perfect Storm: Design for the Future</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Conference Hall 2</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">Open Talks / Drinks</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">Main Hall</div>
+                          </div>
+                          <div class="stats-schedule-info">
+                              <div class="stats-schedule-dec">Closing time</div><br>
+                              <div class="stats-schedule-dec-location"><img src="../../images/icons/location.svg" alt="location">On your way home</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+               
+      
+      
               </div>
              <div class="chart-sales">
           <canvas id="myChart" width="400" height="400"></canvas>
@@ -539,11 +690,9 @@
 
 
 
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/handlebars.js"></script>
-        <script src=".././helpers/links.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="../.././js/main.js"></script>
     </body>
 
 </html>
