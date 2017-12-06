@@ -241,3 +241,103 @@ var config = {
 
 var ctx = document.getElementById("myChart").getContext("2d");
 new Chart(ctx, config);
+
+
+/*******************   Tickets sold chart   ********************/
+
+var ctx = document.getElementById("ticketsSold");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["1:00 pm", "4:00 pm", "7:00 pm", "10:00 pm", "1:00 Am", "4:00 Am", "7:00 Am", "10:00 Am"],
+        datasets: [{
+            label: 'Tickets Sold',
+            data: [0, 2, 4, 2, 5, 2, 1, 1, 1],
+            backgroundColor: [
+                'rgba(35, 132, 222, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderColor: [
+                'rgba(35, 132, 222, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderWidth: 1
+        },
+        {
+            label: 'Income',
+            data: [0, 3, 5, 3, 6, 3, 2, 2, 2],
+            backgroundColor: [
+                'rgba(72, 206, 189, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderColor: [
+                'rgba(72, 206, 189, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderWidth: 1
+        }
+    ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        },
+        legend: {
+            display: false
+        },
+        tooltips: {
+            callbacks: {
+               label: function(tooltipItem) {
+                      return tooltipItem.yLabel;
+               }
+            }
+        }
+    }
+});
+
+/*******************    Shares chart   ********************/
+
+var ctx = document.getElementById("sharesChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,],
+        datasets: [{
+            label: 'Tickets Sold',
+            data: [12, 0, 24, 0, 18, 0, 22, 0, 17, 0, 5, 0, 14, 0, 9, 0, 23, 0,12, 0, 24, 0, 18, 0, 22, 0, 17, 0, 5, 0, 14, 0, 9, 0, 23, 0],
+            backgroundColor: [
+                'rgba(35, 132, 222, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderColor: [
+                'rgba(35, 132, 222, 1)',
+                'rgba(72, 206, 189, 1)'
+            ],
+            borderWidth: 1
+        },
+    ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        },
+        legend: {
+            display: false
+        },
+        tooltips: {
+            callbacks: {
+               label: function(tooltipItem) {
+                      return tooltipItem.yLabel;
+               }
+            }
+        }
+    }
+});
