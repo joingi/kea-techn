@@ -145,3 +145,133 @@
     font-weight: 300;
     font-size: 1em;
 }
+
+.stats-tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    border: 1px solid $borderGray;
+    padding: 20px;
+    margin: 20px 0; 
+}
+
+.stats-ticket-hedline,
+.stats-price,
+.stats-event-hedline {
+    font-size: 1.5em;
+}
+
+.stats-price-info {
+    font-size: 3em;
+}
+
+hr {
+    display: block;
+    width: 90%;
+    border: 0;
+    border-top: 1px solid $borderGray;
+    margin-bottom: 3em;
+    padding: 0;
+}
+
+.stats-price-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-event-info-container {
+    width: 45vw;
+    border: 1px solid $borderGray;
+    padding: 40px;
+    margin: 20px 0; 
+}
+
+.stats-event-hedline {
+    margin-bottom: 20px;    
+}
+
+.stats-event-layout,
+.stats-scedule-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-event-hedlines {
+    margin: 10px 40px 0 40px;
+}
+
+.stats-event-hedline-small {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.stats-event-description {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.stats-event-date {
+    margin-top: 20px;
+}
+
+.stats-event-dec,
+.stats-event-description-info {
+    margin-top: 25px;
+}
+
+.stats-event-location,
+.stats-event-cat-info {
+    margin-top: 60px;
+}
+
+.stats-event-cat {
+    margin-top: 195px;
+}
+
+.stats-event-date-info {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.stats-event-date-from {
+    margin-right: 20px; 
+}
+
+.stats-event-location-info {
+    margin-top: 23px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-event-text {
+    margin-top: 10px;
+}
+
+.stats-scedule-container {
+    width: 25vw;
+    border: 1px solid #E9E9E9;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.stats-schedule-timestamp {
+    font-weight: 300;
+    margin-top: 38px;
+    &:first-child {
+        margin-top:0;
+    }
+}
+
+.stats-schedule-img {
+    margin-top: -35px;
+}
+
+.stats-schedule-dec-location img {
+    margin-right: 10px;
+}

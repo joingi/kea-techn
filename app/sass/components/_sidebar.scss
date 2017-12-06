@@ -204,9 +204,22 @@
   min-height:90px;
 }
 
-// 
+//
 // .events-logo{
 //   svg g g {
 //     fill:$primaryRed;
 //   }
 // }
+
+.buttonSidebar-is-collapsed{
+   transform:translate(20px,10px);
+}
+
+@media screen and (max-width: 670px){
+  .sidebar{
+    display: none;
+  }
+  .main-container{
+    margin-left: 0px;
+  }
+}

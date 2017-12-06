@@ -1,4 +1,6 @@
 /* Base */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+/* Color */
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -380,9 +382,9 @@ template {
   transition: margin-left 0.3s ease-in; }
 
 body {
-  font-family: 'SourceSansPro-Regular'; }
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #4E5058; }
 
-/* Color */
 /* components */
 .menu-wraper {
   display: flex;
@@ -390,7 +392,6 @@ body {
   align-items: end;
   min-height: 109px;
   height: auto;
-  padding-left: 20px;
   padding-top: 20px; }
 
 .menu-wraper-button-container {
@@ -402,7 +403,6 @@ body {
   margin-left: auto; }
 
 .header-wraper {
-  padding: 0 20px;
   position: relative; }
 
 .btn-upcoming-events p {
@@ -410,7 +410,8 @@ body {
   padding: 15px 20px;
   background: #E74C3C;
   font-size: 14px;
-  color: white; }
+  color: white;
+  white-space: nowrap; }
 
 .btn-past-events p {
   border-radius: 100px;
@@ -418,10 +419,13 @@ body {
   background: white;
   font-size: 14px;
   color: #4E5058;
-  border: 1px solid #E9E9E9; }
+  border: 1px solid #E9E9E9;
+  white-space: nowrap; }
 
 .btn-search-container {
   width: 100%; }
+  .btn-search-container p {
+    white-space: nowrap; }
 
 .btn-search {
   display: flex;
@@ -429,24 +433,25 @@ body {
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 100px;
-  padding: 0px 20px;
+  padding: 15px 20px;
   justify-content: space-between; }
   .btn-search p {
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 0; }
 
 .menu-view-container {
   display: flex;
   width: 100%;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
   margin-bottom: 10px; }
 
-.menu-view a:nth-child(1) {
-  margin-right: 20px; }
-
-.menu-view a:nth-child(2) {
-  margin-right: 40px; }
+.menu-view {
+  display: flex; }
+  .menu-view a:nth-child(1) {
+    margin-right: 20px; }
+  .menu-view a:nth-child(2) {
+    margin-right: 20px; }
 
 .user {
   display: flex;
@@ -464,14 +469,26 @@ body {
     width: 100%;
     text-align: center; }
 
-@media screen and (max-width: 1148px) {
+@media screen and (max-width: 1064px) {
+  .user span {
+    display: none; }
+  .menu-view a {
+    margin-right: 10px !important; }
+    .menu-view a svg {
+      height: 25px; }
+  .btn-upcoming-events p {
+    padding: 10px 15px; }
+  .btn-past-events p {
+    padding: 10px 15px; }
+  .btn-search {
+    padding: 10px 15px; } }
+
+@media screen and (max-width: 842px) {
+  .menu-view-container {
+    flex-wrap: wrap; }
   .menu-wraper-button-container:nth-child(4) {
     margin-right: auto;
-    margin-left: 0; }
-  .menu-view a svg {
-    width: 25px; }
-  .menu-view a:nth-child(2) {
-    margin-right: 20px; } }
+    margin-left: 0; } }
 
 .events-card {
   display: flex;
@@ -618,8 +635,8 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: auto;
+  grid-template-columns: 1fr;
   grid-gap: 40px; }
 
 .partners-card {
@@ -629,7 +646,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   position: relative;
   padding: 2rem;
   top: 0;
@@ -637,6 +653,10 @@ body {
   .partners-card:hover {
     top: -2;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+  .partners-card article span {
+    display: flex; }
+    .partners-card article span img {
+      margin-right: 7px; }
 
 .partners-card .partner-thumb {
   padding-bottom: 60%;
@@ -800,11 +820,20 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
+.buttonSidebar-is-collapsed {
+  transform: translate(20px, 10px); }
+
+@media screen and (max-width: 670px) {
+  .sidebar {
+    display: none; }
+  .main-container {
+    margin-left: 0px; } }
+
 .partners-card article {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-evenly; }
 
 .partners-card span {
   line-height: 30px; }
@@ -932,3 +961,120 @@ body {
   font-family: 'SourceSansPro-Regular';
   font-weight: 300;
   font-size: 1em; }
+
+.stats-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  border: 1px solid #E9E9E9;
+  padding: 20px;
+  margin: 20px 0; }
+
+.stats-ticket-hedline,
+.stats-price,
+.stats-event-hedline {
+  font-size: 1.5em; }
+
+.stats-price-info {
+  font-size: 3em; }
+
+hr {
+  display: block;
+  width: 90%;
+  border: 0;
+  border-top: 1px solid #E9E9E9;
+  margin-bottom: 3em;
+  padding: 0; }
+
+.stats-price-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.stats-event-info-container {
+  width: 45vw;
+  border: 1px solid #E9E9E9;
+  padding: 40px;
+  margin: 20px 0; }
+
+.stats-event-hedline {
+  margin-bottom: 20px; }
+
+.stats-event-layout,
+.stats-scedule-layout {
+  display: flex;
+  justify-content: space-between; }
+
+.stats-event-hedlines {
+  margin: 10px 40px 0 40px; }
+
+.stats-event-hedline-small {
+  margin-bottom: 10px;
+  font-weight: 600; }
+
+.stats-event-description {
+  margin-bottom: 10px;
+  font-weight: 400; }
+
+.stats-event-date {
+  margin-top: 20px; }
+
+.stats-event-dec,
+.stats-event-description-info {
+  margin-top: 25px; }
+
+.stats-event-location,
+.stats-event-cat-info {
+  margin-top: 60px; }
+
+.stats-event-cat {
+  margin-top: 195px; }
+
+.stats-event-date-info {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px; }
+
+.stats-event-date-from {
+  margin-right: 20px; }
+
+.stats-event-location-info {
+  margin-top: 23px; }
+
+.stats-row {
+  display: flex;
+  justify-content: space-around; }
+
+.stats-event-text {
+  margin-top: 10px; }
+
+.stats-scedule-container {
+  width: 25vw;
+  border: 1px solid #E9E9E9;
+  padding: 40px;
+  margin: 20px 0; }
+
+.stats-schedule-timestamp {
+  font-weight: 300;
+  margin-top: 38px; }
+  .stats-schedule-timestamp:first-child {
+    margin-top: 0; }
+
+.stats-schedule-img {
+  margin-top: -35px; }
+
+.stats-schedule-dec-location img {
+  margin-right: 10px; }
+
+@media only screen and (min-width: 500px) {
+  .partners-grid-container {
+    grid-template-columns: 1fr; } }
+
+@media only screen and (min-width: 850px) {
+  .partners-grid-container {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media only screen and (min-width: 1240px) {
+  .partners-grid-container {
+    grid-template-columns: repeat(4, 1fr); } }

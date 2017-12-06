@@ -29,6 +29,11 @@ To push to github, you have to be on your branch and use following command
 ```
 git push origin name-of-YOUR-branch
 ```
+
+For Gulp watch, run
+```
+gulp
+```
 ## Built With
 
 * Add tools Here
