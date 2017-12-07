@@ -555,8 +555,6 @@ body {
     width: calc(100% / 2 - 10px); } }
 
 @media screen and (max-width: 842px) {
-  .event-time-1 {
-    margin: 20px 10px; }
   .event-card-container {
     width: calc(100%); }
   .event-time-filter {
@@ -592,7 +590,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1058px;
-  height: 100%;
   margin: 0 10px 0 0px; }
 
 #events-container {
@@ -614,7 +611,8 @@ body {
   height: 100%;
   align-items: center;
   max-height: 610px;
-  padding-left: 50px; }
+  padding-left: 50px;
+  margin-top: 350px; }
   .event-time-filter-box:before {
     content: "";
     height: 100%;
@@ -624,6 +622,7 @@ body {
     position: absolute; }
 
 .event-time-filter-box-container {
+  margin-top: 200px;
   align-items: center;
   justify-content: center; }
   .event-time-filter-box-container div {
@@ -942,6 +941,56 @@ body {
 
 .partner-thumb {
   background-repeat: no-repeat; }
+
+.editUser {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background: #2C3E50;
+  width: 100%;
+  max-width: 200px;
+  right: -20px;
+  top: 33px;
+  height: 246px;
+  border-radius: 2px; }
+  .editUser ul {
+    padding: 0 20px 10px 20px;
+    margin: 0; }
+    .editUser ul li:nth-child(1) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%; }
+      .editUser ul li:nth-child(1) p {
+        color: white; }
+    .editUser ul li {
+      list-style-type: none; }
+      .editUser ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .editUser ul li a svg {
+          height: 20px; }
+        .editUser ul li a p {
+          padding-left: 20px; }
+
+#btnLogout {
+  background-color: white;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+  padding: 5px 20px; }
+  #btnLogout svg {
+    margin-right: 20px; }
+
+.editUser-is-collapsed {
+  display: inline-block; }
 
 .iCarouselArticles {
   padding: 40px 0px;

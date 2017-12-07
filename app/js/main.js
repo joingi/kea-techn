@@ -76,11 +76,33 @@ btnSidebarMobile.addEventListener("click", function(){
 //
 // }, false);
 
+btnCloseEditUser = document.getElementById("btnCloseEditUser");
+editUser = document.getElementById("editUser");
 
-window.onload = function(){
-  document.getElementById('test2').click();
-  // return true;
-  }
+btnCloseEditUser.addEventListener("click", function(){
+
+  editUser.classList.remove('editUser-is-collapsed');
+});
+
+btnEditUser.addEventListener("click", function(){
+
+  editUser.classList.add('editUser-is-collapsed');
+});
+
+// btnEditUser.addEventListener("click", function(){
+//   console.log("ZZDWE")
+//   if(btnCloseEditUser.classList.contains('editUser-is-collapsed')){
+//
+//       btnCloseEditUser.classList.remove('editUser-is-collapsed')
+//       consolelog("ASAAA")
+//
+//   }else{
+//     btnCloseEditUser.classList.add('editUser-is-collapsed');
+//
+//   }
+// })
+
+
 
   /*******************   Carosel   ********************/
 
@@ -172,38 +194,38 @@ Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
 						sA = vm.startAngle,
 						eA = vm.endAngle,
 						opts = this._chart.config.options;
-				
+
 					var labelPos = this.tooltipPosition();
 					var segmentLabel = vm.circumference / opts.circumference * 100;
-					
+
 					ctx.beginPath();
-					
+
 					ctx.arc(vm.x, vm.y, vm.outerRadius, sA, eA);
 					ctx.arc(vm.x, vm.y, vm.innerRadius, eA, sA, true);
-					
+
 					ctx.closePath();
 					ctx.strokeStyle = vm.borderColor;
 					ctx.lineWidth = vm.borderWidth;
-					
+
 					ctx.fillStyle = vm.backgroundColor;
-					
+
 					ctx.fill();
 					ctx.lineJoin = 'bevel';
-					
+
 					if (vm.borderWidth) {
 						ctx.stroke();
 					}
-					
+
 					if (vm.circumference > 0.0015) { // Trying to hide label when it doesn't fit in segment
 						ctx.beginPath();
 						ctx.font = helpers.fontString(opts.defaultFontSize, opts.defaultFontStyle, opts.defaultFontFamily);
 						ctx.fillStyle = "#fff";
 						ctx.textBaseline = "top";
 						ctx.textAlign = "center";
-            
+
             // Round percentage in a way that it always adds up to 100%
 						ctx.fillText(segmentLabel.toFixed(2) + "%", labelPos.x, labelPos.y);
-					
+
 
           }
           //display in the center the total sum of all segments
