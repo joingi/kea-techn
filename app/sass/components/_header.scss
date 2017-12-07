@@ -88,7 +88,7 @@
 
 .user{
   display: flex;
-  border: 1px solid blue;
+  border-left:1px solid #E9E9E9;
   margin-left: auto;
   padding: 15px 20px;
   align-items: center;
@@ -98,6 +98,7 @@
     width: 50px;
     border-radius: 100px;
     background-color: green;
+    margin-right: 10px;
   }
   span{
     width: 100%;
