@@ -343,6 +343,7 @@ var myChart = new Chart(ctx, {
     }
 });
 
+
 /*******************    Shares chart   ********************/
 
 var ctx = document.getElementById("sharesChart");
@@ -385,3 +386,4 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+myChart.ctx.canvas.removeEventListener('wheel', myChart._wheelHandler);
