@@ -18,7 +18,14 @@ gulp.task('browserSync', ['sass'], function () {
             '/events': 'app/views/html/events.html',
             '/partners': 'app/views/html/partners.html',
             '/statistics': 'app/views/html/statistics.html',
-            '/work': 'app/views/html/statistics-work.html'
+            '/work': 'app/views/html/statistics-work.html',
+            '/edit-event': 'app/views/html/edit-event.html',
+            '/edit-partner': 'app/views/html/edit-partner.html',
+            '/edit-shedule': 'app/views/html/edit-shedule.html',
+            '/create-event': 'app/views/html/create-event.html',
+            '/create-partner': 'app/views/html/create-partner.html',
+            '/create-shedule': 'app/views/html/create-shedule.html',
+            '/create-user': 'app/views/html/create-user.html'
           }
       }
     });
