@@ -16,7 +16,9 @@ gulp.task('browserSync', ['sass'], function () {
           browser: 'google chrome',
           routes: {
             '/events': 'app/views/html/events.html',
-            '/partners': 'app/views/html/partners.html'
+            '/partners': 'app/views/html/partners.html',
+            '/statistics': 'app/views/html/statistics.html',
+            '/work': 'app/views/html/statistics-work.html'
           }
       }
     });

@@ -1,4 +1,4 @@
-{{!-- pages/events.hbs --}}
+{{!-- pages/statistics-work.hbs --}}
 
 {{#> layouts/base title="Events" }}
 
@@ -7,26 +7,21 @@
       header-src="img/hero-1.png"
       header-alt="Header 13 alt title"
     }}
-
-
-
   {{/inline}}
 
-    {{#> sidebar-block}}
+  {{#> sidebar-block}}
 
   {{/sidebar-block}}
 
 
-
-
   {{#*inline "container-block"}}
-      {{> layouts/events-list}}
-
+      {{> layouts/statistics-list}}
+      {{> includes/chart-sales}}
   {{/inline}}
 
 
   {{#*inline "scripts-block"}}
-    <script src="../.././js/main.js"></script>
+
   {{/inline}}
 
 {{/layouts/base}}
