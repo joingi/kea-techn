@@ -800,3 +800,14 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
+.partners-card article {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.partners-card span {
+  line-height: 30px; }
+
+.partner-thumb {
+  background-repeat: no-repeat; }
