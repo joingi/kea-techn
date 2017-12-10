@@ -50,8 +50,12 @@ gulp.task('html', function () {
 
 // All tasks
 gulp.task('watch', ['browserSync'], function () {
+  // livereload.changed()
     gulp.watch('app/views/**/*.hbs', ['html']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
+    // gulp.watch('app/css/*.css', function(file){
+    //   livereload.changed(file)
+    // });
     gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });

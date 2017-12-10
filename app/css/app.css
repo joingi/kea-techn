@@ -841,8 +841,11 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
-.events-logo svg g g {
-  fill: #E74C3C; }
+.events-logo svg g g:hover {
+  fill: green; }
+
+.events-logo svg g g:focus {
+  fill: blue; }
 
 .events-logo span {
   color: #E74C3C; }
