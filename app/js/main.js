@@ -104,6 +104,13 @@ btnEditUser.addEventListener("click", function(){
 
 
 
+
+
+
+
+
+
+
   /*******************   Carosel   ********************/
 
   $(".js-carousel").each(function(){

@@ -12,9 +12,11 @@ gulp.task('browserSync', ['sass'], function () {
         server:{
           baseDir: 'app',
           logFileChanges:false,
-          index: './views/html/events.html',
+          // index: './views/html/events.html',
+          index: './views/html/login.html',
           browser: 'google chrome',
           routes: {
+            '/login': 'app/views/html/login.html',
             '/events': 'app/views/html/events.html',
             '/partners': 'app/views/html/partners.html',
             '/statistics': 'app/views/html/statistics.html',
