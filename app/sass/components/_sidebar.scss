@@ -208,7 +208,12 @@
 
 .events-logo{
   svg g g {
-    fill:$primaryRed;
+    &:hover{
+    fill:green;
+    }
+    &:focus{
+      fill:blue;
+    }
   }
   span{
     color:$primaryRed;

@@ -12,9 +12,11 @@ gulp.task('browserSync', ['sass'], function () {
         server:{
           baseDir: 'app',
           logFileChanges:false,
-          index: './views/html/events.html',
+          // index: './views/html/events.html',
+          index: './views/html/login.html',
           browser: 'google chrome',
           routes: {
+            '/login': 'app/views/html/login.html',
             '/events': 'app/views/html/events.html',
             '/partners': 'app/views/html/partners.html',
             '/statistics': 'app/views/html/statistics.html',
@@ -50,8 +52,12 @@ gulp.task('html', function () {
 
 // All tasks
 gulp.task('watch', ['browserSync'], function () {
+  // livereload.changed()
     gulp.watch('app/views/**/*.hbs', ['html']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
+    // gulp.watch('app/css/*.css', function(file){
+    //   livereload.changed(file)
+    // });
     gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
