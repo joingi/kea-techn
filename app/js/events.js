@@ -102,3 +102,8 @@ btnCloseEditUser.addEventListener("click", function(){
 // mja.addEventListener("click",function(e){
 //     e.target.parentElement.style.fill=" rgb(215, 155, 255);";
 // });
+
+
+function mja(){
+  console.log("X")
+}

@@ -939,18 +939,6 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
-.events-logo:focus svg g g:hover {
-  fill: green; }
-
-.events-logo:focus svg g g:focus {
-  fill: blue; }
-
-.events-logo:focus svg g g:focus {
-  fill: blue; }
-
-.events-logo:focus span {
-  color: #E74C3C; }
-
 .buttonSidebar-is-collapsed {
   transform: translate(0px, 0px); }
 
