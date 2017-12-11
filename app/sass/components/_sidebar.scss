@@ -208,7 +208,12 @@
 
 .events-logo:focus{
   svg g g {
-    fill:$primaryRed;
+    &:hover{
+    fill:green;
+    }
+    &:focus{
+      fill:blue;
+    }
   }
   span{
     color:$primaryRed;
@@ -216,7 +221,13 @@
 }
 
 .buttonSidebar-is-collapsed{
-   transform:translate(20px,10px);
+  //  transform:translate(20px,10px);
+   transform:translate(0px,0px);
+}
+.btn-sidebar-menu-collapsed {
+  span{
+    margin-top: 22px;
+  }
 }
 
 @media screen and (max-width: 670px){

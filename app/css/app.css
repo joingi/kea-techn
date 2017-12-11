@@ -502,6 +502,62 @@ body {
   .searchfilter {
     margin-left: auto; } }
 
+#login {
+  height: 100vh;
+  width: 100vw; }
+  #login .box {
+    height: calc(100% / 2);
+    width: 100vw; }
+
+.login-container {
+  width: 100%;
+  max-width: 300px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(43, 59, 93, 0.5);
+  margin: 0 auto;
+  /* top: 50%; */
+  position: relative;
+  top: calc(100% / 2); }
+
+.login {
+  padding: 30px; }
+  .login h3 {
+    text-align: center;
+    margin-bottom: 40px; }
+  .login ul {
+    padding: 0; }
+    .login ul li, .login ul input {
+      list-style-type: none;
+      background: #FFFFFF;
+      border: 1px solid #E9E9E9;
+      border-radius: 4px;
+      padding: 10px;
+      color: #B2B2B2;
+      font-size: 14px;
+      margin-top: 10px; }
+    .login ul input {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none; }
+  .login span {
+    font-size: 10px;
+    color: #4E5058;
+    font-weight: 100;
+    float: right;
+    margin: 5px 0; }
+
+#btnLogin {
+  width: 100%;
+  padding: 20px;
+  background: #2C3E50;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none; }
+
 .events-card {
   display: flex;
   justify-content: space-around;
@@ -611,8 +667,7 @@ body {
   height: 100%;
   align-items: center;
   max-height: 610px;
-  padding-left: 50px;
-  margin-top: 350px; }
+  padding-left: 50px; }
   .event-time-filter-box:before {
     content: "";
     height: 100%;
@@ -841,14 +896,25 @@ body {
 .sidebarMenuLink-is-collapsed:nth-child(2) {
   min-height: 90px; }
 
+<<<<<<< HEAD
 .events-logo:focus svg g g {
   fill: #E74C3C; }
+=======
+.events-logo svg g g:hover {
+  fill: green; }
+
+.events-logo svg g g:focus {
+  fill: blue; }
+>>>>>>> 5159975cfe06657ceff6969a538744c12f028678
 
 .events-logo:focus span {
   color: #E74C3C; }
 
 .buttonSidebar-is-collapsed {
-  transform: translate(20px, 10px); }
+  transform: translate(0px, 0px); }
+
+.btn-sidebar-menu-collapsed span {
+  margin-top: 22px; }
 
 @media screen and (max-width: 670px) {
   .sidebar {
