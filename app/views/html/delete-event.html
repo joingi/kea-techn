@@ -4,7 +4,7 @@
 
   <head>
     <title>
-         Create Shedule 
+         Delete Event 
     </title>
     <link rel="stylesheet" href="css/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -408,34 +408,19 @@
     </div>
 
 
-      <div class="form-container">
-          <div class="edit-form">
-              <div class="edit-form-header">
-                  <div>Edit Shedule</div>
-                  <a href="/statistics"><img src="../../images/icons/close.svg" alt="Close"></a>
+      <div class="event-card-delete-container">
+      <div class="event-card-delete" >
+          <h3>Delete this event?</h3>
+          <div class="event-card-buttons">
+              <div class="event-card-hover-delete-button">
+                  <a href="/events"><button class="button-delete" >Yes, Delete</button></a>
               </div>
-              <div class="edit-form-container">
-                  <form action="/statistics">
-                      <input class="input-box" type="text" name="Title" placeholder="Title"><br>
-                      <input class="input-box" type="text" name="Time" placeholder="Time"><br>
-                      <input class="input-box" type="text" name="Location" placeholder="Location"><br>
-                      <hr/>
-                      <input class="input-box" type="text" name="Title" placeholder="Title"><br>
-                      <input class="input-box" type="text" name="Time" placeholder="Time"><br>
-                      <input class="input-box" type="text" name="Location" placeholder="Location"><br>
-                      <hr/>
-                      <input class="input-box" type="text" name="Title" placeholder="Title"><br>
-                      <input class="input-box" type="text" name="Time" placeholder="Time"><br>
-                      <input class="input-box" type="text" name="Location" placeholder="Location"><br>
-                      <hr/>
-                      <input class="input-box" type="text" name="Title" placeholder="Title"><br>
-                      <input class="input-box" type="text" name="Time" placeholder="Time"><br>
-                      <input class="input-box" type="text" name="Location" placeholder="Location"><br>
-                      
-                      <input class="input-button" type="submit" value="Edit Shedule">
-                  </form>
+              <div class="event-card-hover-cancel-button">
+                  <a href="/events"><p class="button-delete-cancel">Cancel</p></a>
               </div>
           </div>
+          <p>Caution: This cannot be undone</p>
+      </div>
       </div>
 
         </div>
