@@ -51,20 +51,38 @@ btnSidebarMobile.addEventListener("click", function(){
 
 
 // btnCloseEditUser = document.getElementById("btnCloseEditUser");
-btnEditUser = document.querySelectorAll(".btnEditUser");
-editUser = document.getElementById("editUser");
+var btnEditUser = document.getElementById("btnEditUser");
+var editUser = document.getElementById("editUser");
 
-for(var i = 0; i < btnEditUser.length; i++){
-  btnEditUser[i].addEventListener("click", function(){
-    if(editUser.classList.contains('editUser-is-collapsed')){
+btnEditUser.addEventListener("click", function(){
+  if(editUser.classList.contains('editUser-is-collapsed')){
+    console.log("mama")
+  }else{
+    editUser.classList.add('editUser-is-collapsed');
+  }
+
+});
+
+btnCloseEditUser.addEventListener("click", function(){
+  if(editUser.classList.contains('editUser-is-collapsed')){
       editUser.classList.remove('editUser-is-collapsed');
-        console.log("xxx")
-    }else{
-        editUser.classList.add('editUser-is-collapsed');
-        console.log("YYY")
-    }
-  });
-}
+  }else{
+    console.log("ASD")
+  }
+
+});
+
+// for(var i = 0; i < btnEditUser.length; i++){
+//   btnEditUser[i].addEventListener("click", function(){
+//     if(editUser.classList.contains('editUser-is-collapsed')){
+//       editUser.classList.remove('editUser-is-collapsed');
+//         console.log("xxx")
+//     }else{
+//         editUser.classList.add('editUser-is-collapsed');
+//         console.log("YYY")
+//     }
+//   });
+// }
 // btnEditUser.addEventListener("click", function(){
 //
 //   editUser.classList.add('editUser-is-collapsed');
@@ -75,4 +93,12 @@ for(var i = 0; i < btnEditUser.length; i++){
 //
 //   editUser.classList.remove('editUser-is-collapsed');
 //   console.log("XX")
+// });
+
+
+
+// mja = document.activeElement.style.fill = "red"
+//
+// mja.addEventListener("click",function(e){
+//     e.target.parentElement.style.fill=" rgb(215, 155, 255);";
 // });
