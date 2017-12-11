@@ -2,23 +2,19 @@
 
 {{#> layouts/base title="Partners" }}
 
-   {{#*inline "sidebar-block"}}
-      {{> includes/sidebar}}
-  {{/inline}}
-
-  {{!-- Let's change the header image for this layout. --}}
-  {{#*inline "header-block"}}
-    {{> includes/header }}
-  {{/inline}}
+{{#*inline "header-block"}}
+  {{> includes/header
+    header-src="img/hero-1.png"
+    header-alt="Header 13 alt title"
+  }}
 
 
 
+    {{/inline}}
 
+      {{#> sidebar-block}}
 
-  {{#> header-block}}
-      {{!-- Header content goes here. --}}
-
-  {{/header-block}}
+    {{/sidebar-block}}
 
 
 
