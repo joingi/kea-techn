@@ -144,8 +144,76 @@
     }
 }
 
+.js-carousel-item:hover .event-card-carosel {
+    color: white;
+    border: none;
+}
+
+.event-card-container:hover .events-card,
+.event-card-container:hover .events-card span{
+    color: white;
+    border: none;
+    box-shadow: none;
+    visibility: hidden;
+}
+
 .js-carousel-item:hover .event-card-hover {
     display: block;
+}
+
+.event-card-container:hover .event-card-hover {
+    display: block;
+}
+
+.event-card-delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+.event-card-delete {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $borderGray;
+    border-radius: 4px;
+    padding: 40px;
+}
+.event-card-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+.event-card-hover-cancel-button a {
+    text-decoration: none;
+    color: $primaryBlack;
+    &:hover {
+        color: #000;
+    } 
+}
+
+.button-delete {
+    height: 50px;
+    width: 130px;
+    background-color: rgba(216, 216, 216, .4);
+    border: 1px solid $borderGray;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-size: 1em;
+    &:hover {
+        background-color: rgba(216, 216, 216, .9);
+        cursor: pointer;
+    }
+}
+
+.event-card-hover-cancel-button {
+    padding: 20px;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
 }
 
 
@@ -508,7 +576,8 @@ hr {
 
 @media only screen and (max-width: 482px) {
     .stats-schedule-img,
-    .stats-schedule-time {
+    .stats-schedule-time,
+    .stats-event-hedlines {
         display: none;
     }
 
@@ -518,6 +587,13 @@ hr {
 
     .stats-event-dec {
         margin-top: 60px;
+    }
+
+    .stats-event-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

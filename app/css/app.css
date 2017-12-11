@@ -816,6 +816,9 @@ p:hover {
         text-decoration: none;
         padding: 0 10px; }
 
+.sidebar-icon-create-event svg {
+  margin-top: 20px; }
+
 .logo {
   text-align: center;
   margin: 0 auto;
@@ -1216,8 +1219,66 @@ p:hover {
     background-color: rgba(216, 216, 216, 0.6);
     cursor: pointer; }
 
+.js-carousel-item:hover .event-card-carosel {
+  color: white;
+  border: none; }
+
+.event-card-container:hover .events-card,
+.event-card-container:hover .events-card span {
+  color: white;
+  border: none;
+  box-shadow: none;
+  visibility: hidden; }
+
 .js-carousel-item:hover .event-card-hover {
   display: block; }
+
+.event-card-container:hover .event-card-hover {
+  display: block; }
+
+.event-card-delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh; }
+
+.event-card-delete {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  padding: 40px; }
+
+.event-card-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; }
+
+.event-card-hover-cancel-button a {
+  text-decoration: none;
+  color: #4E5058; }
+  .event-card-hover-cancel-button a:hover {
+    color: #000; }
+
+.button-delete {
+  height: 50px;
+  width: 130px;
+  background-color: rgba(216, 216, 216, 0.4);
+  border: 1px solid #E9E9E9;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-size: 1em; }
+  .button-delete:hover {
+    background-color: rgba(216, 216, 216, 0.9);
+    cursor: pointer; }
+
+.event-card-hover-cancel-button {
+  padding: 20px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300; }
 
 .carosel-active {
   background: #E74C3C;
@@ -1500,12 +1561,18 @@ hr {
 
 @media only screen and (max-width: 482px) {
   .stats-schedule-img,
-  .stats-schedule-time {
+  .stats-schedule-time,
+  .stats-event-hedlines {
     display: none; }
   .stats-event-date {
     margin-top: 40px; }
   .stats-event-dec {
-    margin-top: 60px; } }
+    margin-top: 60px; }
+  .stats-event-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; } }
 
 @media only screen and (max-width: 450px) {
   .stats-event-dec {
@@ -1576,6 +1643,10 @@ hr {
   border-top: 1px solid #E9E9E9;
   margin-bottom: 3em;
   padding: 0; }
+
+@media only screen and (max-width: 800px) {
+  .edit-form {
+    width: 100%; } }
 
 @media only screen and (min-width: 500px) {
   .partners-grid-container {
