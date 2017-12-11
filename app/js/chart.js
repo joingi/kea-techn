@@ -1,4 +1,4 @@
-var Chart = require('chart.js');
-
-
-var myChart = new Chart(ctx, {...});
+// var Chart = require('chart.js');
+//
+//
+// var myChart = new Chart(ctx, {...});

@@ -413,7 +413,21 @@ body {
   color: white;
   white-space: nowrap; }
 
-.btn-past-events p {
+.btn-add-partner .btn-add-partner-box {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 15px 20px;
+  padding: 2px 20px;
+  background: #2C3E50;
+  font-size: 14px;
+  color: white;
+  white-space: nowrap; }
+  .btn-add-partner .btn-add-partner-box svg {
+    margin-left: 10px; }
+
+.btn-past-events
+p {
   border-radius: 100px;
   padding: 15px 20px;
   background: white;
@@ -421,6 +435,11 @@ body {
   color: #4E5058;
   border: 1px solid #E9E9E9;
   white-space: nowrap; }
+  .btn-past-events
+p:hover {
+    transition: all 0.1s;
+    background: #E74C3C;
+    color: white; }
 
 .btn-search-container {
   width: 100%; }
@@ -435,6 +454,11 @@ body {
   border-radius: 100px;
   padding: 15px 20px;
   justify-content: space-between; }
+  .btn-search textarea:focus, .btn-search input:focus {
+    outline: none; }
+  .btn-search input {
+    border: none;
+    background-color: transparent; }
   .btn-search p {
     font-size: 14px;
     margin: 0; }
@@ -483,7 +507,8 @@ body {
   .btn-upcoming-events p {
     padding: 10px 15px; }
   .btn-past-events p {
-    padding: 10px 15px; }
+    padding: 10px 15px;
+    transition: all 0.2s; }
   .btn-search {
     padding: 10px 15px; } }
 
@@ -501,6 +526,10 @@ body {
     justify-content: center; }
   .searchfilter {
     margin-left: auto; } }
+
+@media screen and (max-width: 842px) {
+  #menu-view-container-partner {
+    flex-wrap: nowrap; } }
 
 #login {
   height: 100vh;
@@ -768,7 +797,9 @@ body {
       min-height: 56px; }
       .sidebar-menu ul li:nth-child(1) a {
         flex-direction: row-reverse;
-        color: #2C3E50; }
+        color: #2C3E50;
+        display: flex;
+        align-items: baseline; }
       .sidebar-menu ul li:nth-child(1) .sidebar-icon-create-event {
         padding-left: 10px; }
     .sidebar-menu ul li {
@@ -878,6 +909,9 @@ body {
   border: none;
   visibility: visible;
   opacity: 1; }
+  .sidebar-menu-name button a {
+    display: flex;
+    align-items: baseline; }
   .sidebar-menu-name button span {
     display: block;
     font-size: 16px;
@@ -901,6 +935,9 @@ body {
 
 .events-logo:focus svg g g:hover {
   fill: green; }
+
+.events-logo:focus svg g g:focus {
+  fill: blue; }
 
 .events-logo:focus svg g g:focus {
   fill: blue; }
@@ -1050,6 +1087,11 @@ body {
   border: none;
   margin: 0 auto;
   padding: 5px 20px; }
+  #btnLogout a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2C3E50; }
   #btnLogout svg {
     margin-right: 20px; }
 
