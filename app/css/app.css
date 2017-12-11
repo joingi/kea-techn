@@ -395,6 +395,7 @@ body {
   padding-top: 20px; }
 
 .menu-wraper-button-container {
+  text-decoration: none;
   margin: 0 10px; }
 
 .searchfilter {
@@ -405,15 +406,18 @@ body {
 .header-wraper {
   position: relative; }
 
-.btn-upcoming-events p {
-  border-radius: 100px;
-  padding: 15px 20px;
-  background: #E74C3C;
-  font-size: 14px;
-  color: white;
-  white-space: nowrap; }
+.btn-upcoming-events {
+  cursor: pointer; }
+  .btn-upcoming-events p {
+    border-radius: 100px;
+    padding: 15px 20px;
+    background: #E74C3C;
+    font-size: 14px;
+    color: white;
+    white-space: nowrap; }
 
 .btn-add-partner .btn-add-partner-box {
+  cursor: pointer;
   display: flex;
   align-items: center;
   border-radius: 100px;
@@ -426,20 +430,20 @@ body {
   .btn-add-partner .btn-add-partner-box svg {
     margin-left: 10px; }
 
-.btn-past-events
-p {
-  border-radius: 100px;
-  padding: 15px 20px;
-  background: white;
-  font-size: 14px;
-  color: #4E5058;
-  border: 1px solid #E9E9E9;
-  white-space: nowrap; }
-  .btn-past-events
-p:hover {
-    transition: all 0.1s;
-    background: #E74C3C;
-    color: white; }
+.btn-past-events {
+  cursor: pointer; }
+  .btn-past-events p {
+    border-radius: 100px;
+    padding: 15px 20px;
+    background: white;
+    font-size: 14px;
+    color: #4E5058;
+    border: 1px solid #E9E9E9;
+    white-space: nowrap; }
+    .btn-past-events p:hover {
+      transition: all 0.1s;
+      background: #E74C3C;
+      color: white; }
 
 .btn-search-container {
   width: 100%; }

@@ -7,6 +7,7 @@
   padding-top: 20px;
 }
 .menu-wraper-button-container{
+  text-decoration: none;
   margin: 0 10px;
 }
 
@@ -24,6 +25,7 @@
 }
 
 .btn-upcoming-events  {
+  cursor:pointer;
   // min-width: 157px;
   p{
     @include headerButton;
@@ -36,6 +38,7 @@
 .btn-add-partner  {
   // min-width: 157px;
   .btn-add-partner-box{
+      cursor:pointer;
     display: flex;
     align-items: center;
     @include headerButton;
@@ -49,18 +52,20 @@
     }
   }
 }
-.btn-past-events
-p{
-  @include headerButtonPastEvents;
-  background: white;
-  font-size: 14px;
-  color: $primaryBlack;
-  border: 1px solid #E9E9E9;
-  white-space: nowrap;
-  &:hover{
-    transition: all 0.1s;
-    background: $primaryRed;
-    color: white;
+.btn-past-events{
+cursor:pointer;
+  p{
+    @include headerButtonPastEvents;
+    background: white;
+    font-size: 14px;
+    color: $primaryBlack;
+    border: 1px solid #E9E9E9;
+    white-space: nowrap;
+      &:hover{
+        transition: all 0.1s;
+        background: $primaryRed;
+        color: white;
+    }
   }
 }
 .btn-search-container{
