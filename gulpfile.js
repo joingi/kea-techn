@@ -24,7 +24,6 @@ gulp.task('browserSync', ['sass'], function () {
             '/edit-shedule': 'app/views/html/edit-shedule.html',
             '/create-event': 'app/views/html/create-event.html',
             '/create-partner': 'app/views/html/create-partner.html',
-            '/create-shedule': 'app/views/html/create-shedule.html',
             '/create-user': 'app/views/html/create-user.html'
           }
       }
