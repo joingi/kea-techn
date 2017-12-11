@@ -527,9 +527,11 @@ p:hover {
   .searchfilter {
     margin-left: auto; } }
 
-@media screen and (max-width: 842px) {
-  #menu-view-container-partner {
-    flex-wrap: nowrap; } }
+#menu-view-container-partner {
+  padding: 15px 0; }
+  @media screen and (max-width: 842px) {
+    #menu-view-container-partner {
+      flex-wrap: nowrap; } }
 
 #login {
   height: 100vh;
