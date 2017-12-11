@@ -253,54 +253,32 @@
 
     <div class="header-wraper">
       <div class="menu-wraper">
-    <div class="menu-view-container">
+    <div class="menu-view-container" id="menu-view-container-partner">
       <div class="menu-view-filters">
-        <div class="menu-view">
-    
-          <a href="/statistics">
-            <svg width="30px" height="32px" viewBox="0 0 30 32" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <g transform="translate(-200 -28)" fill="#2C3E50">
-                  <g transform="translate(200 28)">
-                    <path d="M0 0h6v6H0zm0 9h18v10H0zm0 13h18v10H0zM12 0h6v6h-6zm9 9h9v10h-9zm0 13h9v10h-9zm3-22h6v6h-6z"/>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
-    
-          <a href="/events">
-            <svg width="30px" height="32px" viewBox="0 0 30 32" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <g transform="translate(-250 -28)" fill="#E74C3C">
-                  <g transform="translate(250 28)">
-                    <path d="M0 0h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6zM0 13h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6zM0 26h6v6H0zm12 0h6v6h-6zm12 0h6v6h-6z"/>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
-    
-        </div>
     
     
-          <a class="menu-wraper-button-container">
-            <div class="btn-upcoming-events">
-              <p>Upcoming events</p>
-            </div>
-          </a>
-    
-          <a class="menu-wraper-button-container">
-            <div class="btn-past-events">
-              <p>Past events</p>
+          <a class="menu-wraper-button-container" href="/create-partner">
+            <div class="btn-add-partner">
+              <div class="btn-add-partner-box">
+                <p>Add New Partner</p>
+                <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Statistics" transform="translate(-238.000000, -150.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                            <g id="Group" transform="translate(67.000000, 145.000000)">
+                                <g id="plus-(3)" transform="translate(171.000000, 5.000000)">
+                                    <path d="M8,0 C3.58892308,0 0,3.58861538 0,8 C0,12.4113846 3.58892308,16 8,16 C12.4110769,16 16,12.4113846 16,8 C16,3.58861538 12.4110769,0 8,0 Z M11.8461538,8.61538462 L8.61538462,8.61538462 L8.61538462,12 C8.61538462,12.3396923 8.33969231,12.6153846 8,12.6153846 C7.66030769,12.6153846 7.38461538,12.3396923 7.38461538,12 L7.38461538,8.61538462 L4.15384615,8.61538462 C3.81415385,8.61538462 3.53846154,8.33969231 3.53846154,8 C3.53846154,7.66030769 3.81415385,7.38461538 4.15384615,7.38461538 L7.38461538,7.38461538 L7.38461538,4.30769231 C7.38461538,3.968 7.66030769,3.69230769 8,3.69230769 C8.33969231,3.69230769 8.61538462,3.968 8.61538462,4.30769231 L8.61538462,7.38461538 L11.8461538,7.38461538 C12.1858462,7.38461538 12.4615385,7.66030769 12.4615385,8 C12.4615385,8.33969231 12.1858462,8.61538462 11.8461538,8.61538462 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+              </div>
             </div>
           </a>
         </div>
           <a class="menu-wraper-button-container searchfilter">
               <div class="btn-search">
                 <input type="text" autofocus="false"  style="    border: none;" placeholder="Search for events..."/>
-    
-    
                 <svg width="19px" height="19px" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fill-rule="evenodd">
                     <g transform="translate(-1151 -36)" fill-rule="nonzero" fill="#7C7C7C">
@@ -312,9 +290,9 @@
                 </svg>
               </div>
           </a>
-        </div>
+      </div>
     
-          <div class="user" id="btnEditUser" >
+          <div class="user btnEditUser" id="btnEditUser" >
             <img src="../../.././images/mask.jpg" />
             <span>John Doe</span>
             <svg width="17px" height="9px" viewBox="0 0 17 9" xmlns="http://www.w3.org/2000/svg">
@@ -326,8 +304,8 @@
                 </g>
               </g>
             </svg>
-          </div>
     
+          </div>
           <div class="editUser" id="editUser">
             <ul>
               <li>
@@ -417,7 +395,6 @@
           </div>
     
     
-    
       </div>
     
     </div>
@@ -447,7 +424,7 @@
 
 
 
-    
+
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
         <script src="../.././js/main.js"></script>
