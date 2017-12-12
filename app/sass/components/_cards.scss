@@ -20,15 +20,24 @@
         top: -2;
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-
-    span:nth-child(1){
-      text-transform: uppercase;
-      margin-left: auto;
-      padding-right: 10px;
-      font-weight: lighter;
-      color:#4E5058;
-      font-size: 18px;
+  .events-card-text{
+    height: 100%;
+    width: 100%;
+    span{
+      float: right;
+      margin-right: 15px;
+      margin-top: 10px;
     }
+  }
+    // span:nth-child(1){
+    //   text-transform: uppercase;
+    //   margin-left: auto;
+    //   padding-right: 10px;
+    //   font-weight: lighter;
+    //   color:#4E5058;
+    //   font-size: 18px;
+    // }
+
     h2{
       text-align: center;
       font-size: 24px;

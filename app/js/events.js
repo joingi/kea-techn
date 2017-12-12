@@ -51,17 +51,22 @@ btnSidebarMobile.addEventListener("click", function(){
 
 
 // btnCloseEditUser = document.getElementById("btnCloseEditUser");
-var btnEditUser = document.getElementById("btnEditUser");
-var editUser = document.getElementById("editUser");
+// var btnEditUser = document.querySelectorAll(".btnEditUser");
+// var editUser = document.querySelector(".editUser");
+// var btnCloseEditUser = document.querySelector(".btnCloseEditUser");
 
-btnEditUser.addEventListener("click", function(){
-  if(editUser.classList.contains('editUser-is-collapsed')){
-    console.log("mama")
-  }else{
-    editUser.classList.add('editUser-is-collapsed');
-  }
 
-});
+
+  btnEditUser.addEventListener("click", function(){
+    console.log("XXX")
+    if(editUser.classList.contains('editUser-is-collapsed')){
+      console.log("mama")
+    }else{
+      editUser.classList.add('editUser-is-collapsed');
+    }
+
+  });
+
 
 btnCloseEditUser.addEventListener("click", function(){
   if(editUser.classList.contains('editUser-is-collapsed')){
@@ -69,36 +74,25 @@ btnCloseEditUser.addEventListener("click", function(){
   }else{
     console.log("ASD")
   }
+});
+
+
+
+btnEditUserMobile.addEventListener("click", function(){
+  console.log("XXX")
+  if(editUserMobile.classList.contains('editUser-is-collapsed')){
+    console.log("mama")
+  }else{
+    editUserMobile.classList.add('editUser-is-collapsed');
+  }
 
 });
 
-// for(var i = 0; i < btnEditUser.length; i++){
-//   btnEditUser[i].addEventListener("click", function(){
-//     if(editUser.classList.contains('editUser-is-collapsed')){
-//       editUser.classList.remove('editUser-is-collapsed');
-//         console.log("xxx")
-//     }else{
-//         editUser.classList.add('editUser-is-collapsed');
-//         console.log("YYY")
-//     }
-//   });
-// }
-// btnEditUser.addEventListener("click", function(){
-//
-//   editUser.classList.add('editUser-is-collapsed');
-//     console.log("YYY")
-// });
 
-// btnCloseEditUser.addEventListener("click", function(){
-//
-//   editUser.classList.remove('editUser-is-collapsed');
-//   console.log("XX")
-// });
-
-
-
-// mja = document.activeElement.style.fill = "red"
-//
-// mja.addEventListener("click",function(e){
-//     e.target.parentElement.style.fill=" rgb(215, 155, 255);";
-// });
+editUserMobile.addEventListener("click", function(){
+  if(editUserMobile.classList.contains('editUser-is-collapsed')){
+      editUserMobile.classList.remove('editUser-is-collapsed');
+  }else{
+    console.log("ASD")
+  }
+});

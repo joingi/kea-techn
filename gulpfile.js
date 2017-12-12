@@ -25,6 +25,7 @@ gulp.task('browserSync', ['sass'], function () {
         server:{
           baseDir: 'app',
           logFileChanges:false,
+          directory: true,
           // index: './views/html/events.html',
           index: './views/html/login.html',
           browser: 'google chrome',
@@ -74,8 +75,12 @@ gulp.task('sass', function () {
       return gulp.src('app/css/*.css')
       	.pipe(useref())
           .pipe(gulpIf('*.css', postcss(plugins)))
-          .pipe(gulp.dest('dist/css'));
+          .pipe(gulp.dest('dist/css'))
+          .pipe(livereload());
   });
+
+
+
 
   gulp.task('images-min', function(){
     return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
