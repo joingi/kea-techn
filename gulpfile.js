@@ -20,12 +20,11 @@ var browserSync = require('browser-sync').create();
 
 
 gulp.task('browserSync', ['sass'], function () {
-
     browserSync.init({
         server:{
           baseDir: 'app',
           logFileChanges:false,
-          directory: true,
+          // directory: true,
           // index: './views/html/events.html',
           index: './views/html/login.html',
           browser: 'google chrome',
@@ -45,7 +44,6 @@ gulp.task('browserSync', ['sass'], function () {
           }
       }
     });
-
 });
 
 // Complile sass into css and reload browser
@@ -128,5 +126,5 @@ gulp.task('optimize', function() {
   runSequence('js-conc-min', 'css-conc-min', 'images-min', 'html-min');
 });
 
-gulp.task('default', ['watch', 'optimize']);
+gulp.task('default', ['watch']);
 gulp.task('build', [ 'optimize']);

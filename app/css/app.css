@@ -620,6 +620,10 @@ body {
       float: right;
       margin-right: 15px;
       margin-top: 10px; }
+  .events-card .events-card-text:nth-child(1) {
+    background: #F3F3F3; }
+  .events-card .events-card-text:nth-child(3) {
+    background: #F3F3F3; }
   .events-card h2 {
     text-align: center;
     font-size: 24px;
