@@ -1644,7 +1644,7 @@ hr {
   .partners-grid-container {
     grid-template-columns: 1fr; } }
 
-@media only screen and (min-width: 850px) {
+@media screen and (min-width: 850px) {
   .partners-grid-container {
     grid-template-columns: repeat(3, 1fr); } }
 
