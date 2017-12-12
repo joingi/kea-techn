@@ -951,7 +951,7 @@ body {
   .main-container {
     margin-left: 0px; } }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 671px) {
   .sidebarMobile {
     display: none; } }
 
@@ -1091,6 +1091,11 @@ body {
 
 .editUser-is-collapsed {
   display: inline-block; }
+
+@media screen and (max-width: 670px) {
+  #editUserMobile {
+    top: 72px;
+    right: 0; } }
 
 .iCarouselArticles {
   padding: 40px 0px;
@@ -1573,6 +1578,10 @@ hr {
     right: 10px; }
     .stats-event-icons img {
       margin-left: 0; } }
+
+@media screen and (max-width: 700px) {
+  .carousel-button-image img {
+    height: 50px; } }
 
 .form-container {
   display: flex;
