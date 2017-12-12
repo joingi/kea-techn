@@ -64,3 +64,9 @@
 .editUser-is-collapsed{
   display: inline-block;
 }
+@media screen and (max-width: 670px){
+  #editUserMobile{
+    top: 72px;
+    right:0;
+  }
+}
