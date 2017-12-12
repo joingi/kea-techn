@@ -490,7 +490,8 @@ body {
   margin-left: auto;
   padding: 15px 20px;
   align-items: center;
-  margin-left: 10px; }
+  margin-left: 10px;
+  cursor: pointer; }
   .user img {
     height: 50px;
     width: 50px;
@@ -500,6 +501,10 @@ body {
   .user span {
     width: 100%;
     text-align: center; }
+
+.btnCloseEditUser,
+#close {
+  cursor: pointer; }
 
 @media screen and (max-width: 1064px) {
   .user span {

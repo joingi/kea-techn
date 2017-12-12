@@ -129,6 +129,7 @@ cursor:pointer;
   padding: 15px 20px;
   align-items: center;
   margin-left: 10px;
+  cursor: pointer;
   img{
     height:50px;
     width: 50px;
@@ -158,6 +159,12 @@ cursor:pointer;
 //   }
 //
 // }
+
+.btnCloseEditUser,
+#close {
+  cursor: pointer;
+}
+
 
 
 @media screen and (max-width: 1300px){
