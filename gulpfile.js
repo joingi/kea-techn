@@ -19,28 +19,28 @@ var build = require('gulp-build');
 var browserSync = require('browser-sync').create();
 
 
-gulp.task('browserSync', ['sass'], function () {
+gulp.task('browserSync', ['sass', 'html'], function () {
     browserSync.init({
         server:{
-          baseDir: 'app',
+          baseDir: 'dist',
           logFileChanges:false,
           // directory: true,
           // index: './views/html/events.html',
-          index: './views/html/login.html',
+          index: 'login.html',
           browser: 'google chrome',
           routes: {
-            '/login': 'app/views/html/login.html',
-            '/events': 'app/views/html/events.html',
-            '/partners': 'app/views/html/partners.html',
-            '/statistics': 'app/views/html/statistics.html',
-            '/work': 'app/views/html/statistics-work.html',
-            '/edit-event': 'app/views/html/edit-event.html',
-            '/edit-partner': 'app/views/html/edit-partner.html',
-            '/edit-shedule': 'app/views/html/edit-shedule.html',
-            '/create-event': 'app/views/html/create-event.html',
-            '/create-partner': 'app/views/html/create-partner.html',
-            '/delete-event': 'app/views/html/delete-event.html',
-            '/create-user': 'app/views/html/create-user.html'
+            '/login': 'dist/login.html',
+            '/events': 'dist/events.html',
+            '/partners': 'dist/partners.html',
+            '/statistics': 'dist/statistics.html',
+            '/work': 'dist/statistics-work.html',
+            '/edit-event': 'dist/edit-event.html',
+            '/edit-partner': 'dist/edit-partner.html',
+            '/edit-shedule': 'dist/edit-shedule.html',
+            '/create-event': 'dist/create-event.html',
+            '/create-partner': 'dist/create-partner.html',
+            '/delete-event': 'dist/delete-event.html',
+            '/create-user': 'dist/create-user.html'
           }
       }
     });
@@ -99,7 +99,6 @@ gulp.task('html', function () {
         .pipe(handlebars({}, {
         ignorePartials: true,
         batch: ['app/views/partials'],
-        helpers : 'app/views/helpers'
     }))
     .pipe(rename({
       extname: '.html'
@@ -118,6 +117,7 @@ gulp.task('html-min', function(){
 gulp.task('watch', ['browserSync'], function () {
     gulp.watch('app/views/**/*.hbs', ['html']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
+    gulp.watch('app/views/html/*.html',['html-min']);
     gulp.watch('app/views/html/*.html').on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
@@ -126,5 +126,5 @@ gulp.task('optimize', function() {
   runSequence('js-conc-min', 'css-conc-min', 'images-min', 'html-min');
 });
 
-gulp.task('default', ['watch']);
-gulp.task('build', [ 'optimize']);
+gulp.task('default', ['optimize', 'watch']);
+// gulp.task('build', [ 'optimize']);
